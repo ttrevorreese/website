@@ -1,1 +1,57 @@
 @import "tailwindcss";
+
+/* Class-based dark mode — works with next-themes attribute="class" */
+@custom-variant dark (&:is(.dark *));
+
+/* Map CSS variables to Tailwind color tokens */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-playfair);
+}
+
+/* Light mode (default fallback) */
+:root {
+  --background: #f8f8f6;
+  --foreground: #111111;
+  --card: #eeede9;
+  --muted: #888888;
+  --border: rgba(0, 0, 0, 0.08);
+}
+
+/* Dark mode */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #f0f0f0;
+  --card: #1a1a1a;
+  --muted: #888888;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+/* Smooth color transitions */
+*,
+*::before,
+*::after {
+  transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+}
