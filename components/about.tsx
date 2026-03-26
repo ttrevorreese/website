@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { FadeUp } from "./animations/fade-up"
 import { TextReveal } from "./animations/text-reveal"
 import { profile } from "@/content/profile"
@@ -36,13 +37,24 @@ export function About() {
             </h2>
           </TextReveal>
 
-          <div className="space-y-5">
+          <div className="space-y-5 mb-10">
             {profile.bio.map((paragraph, i) => (
               <FadeUp key={i} delay={0.1 * (i + 1)}>
                 <p className="text-muted leading-relaxed text-sm">{paragraph}</p>
               </FadeUp>
             ))}
           </div>
+
+          <FadeUp delay={0.4}>
+            <Link
+              href={profile.social.etsy}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 border border-border px-6 py-3 text-xs tracking-[0.2em] uppercase hover:bg-card transition-colors"
+            >
+              Shop prints on Etsy
+            </Link>
+          </FadeUp>
         </div>
       </div>
     </section>

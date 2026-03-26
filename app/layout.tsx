@@ -4,6 +4,7 @@ import { GeistMono } from "geist/font/mono"
 import { Playfair_Display } from "next/font/google"
 import { ThemeProvider } from "next-themes"
 import { Nav } from "@/components/nav"
+import { PhotoProtection } from "@/components/photo-protection"
 import "./globals.css"
 
 const playfair = Playfair_Display({
@@ -30,6 +31,7 @@ export default function RootLayout({
     >
       <body className="bg-background text-foreground font-sans">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <PhotoProtection />
           <Nav />
           {children}
         </ThemeProvider>

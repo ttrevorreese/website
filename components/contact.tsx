@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
+import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram, FaEtsy } from "react-icons/fa"
 import { TextReveal } from "./animations/text-reveal"
 import { FadeUp } from "./animations/fade-up"
 import { ContactForm } from "./contact-form"
@@ -10,6 +10,7 @@ const socials = [
   { label: "GitHub", href: profile.social.github, icon: FaGithub },
   { label: "LinkedIn", href: profile.social.linkedin, icon: FaLinkedin },
   { label: "Instagram", href: profile.social.instagram, icon: FaInstagram },
+  { label: "Etsy Shop", href: profile.social.etsy, icon: FaEtsy },
 ]
 
 export function Contact() {

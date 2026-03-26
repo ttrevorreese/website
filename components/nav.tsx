@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import { ThemeToggle } from "./theme-toggle"
 import { cn } from "@/lib/utils"
+import { profile } from "@/content/profile"
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -48,6 +49,14 @@ export function Nav() {
             className="text-xs tracking-[0.2em] uppercase text-muted hover:text-foreground transition-colors hidden sm:block"
           >
             Contact
+          </Link>
+          <Link
+            href={profile.social.etsy}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs tracking-[0.2em] uppercase text-muted hover:text-foreground transition-colors hidden sm:block"
+          >
+            Shop
           </Link>
           <ThemeToggle />
         </div>

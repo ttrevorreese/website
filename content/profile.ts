@@ -15,5 +15,6 @@ export const profile: Profile = {
     github: "https://github.com/ttrevorreese",
     linkedin: "https://linkedin.com/in/trevorreese", // [REPLACE]
     instagram: "https://instagram.com/trevorreese", // [REPLACE]
+    etsy: "https://www.etsy.com/shop/PhotographyByTHR",
   },
 }

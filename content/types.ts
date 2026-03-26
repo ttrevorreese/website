@@ -48,5 +48,6 @@ export type Profile = {
     github: string
     linkedin: string
     instagram: string
+    etsy: string
   }
 }
