@@ -2,6 +2,7 @@ import Link from "next/link"
 import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
 import { TextReveal } from "./animations/text-reveal"
 import { FadeUp } from "./animations/fade-up"
+import { ContactForm } from "./contact-form"
 import { profile } from "@/content/profile"
 
 const socials = [
@@ -15,7 +16,7 @@ export function Contact() {
   return (
     <footer id="contact" className="py-32 px-6 border-t border-border">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-20">
+        <div className="mb-16">
           <TextReveal wrapperClassName="mb-4">
             <p className="text-xs tracking-[0.35em] uppercase text-muted">Contact</p>
           </TextReveal>
@@ -28,6 +29,11 @@ export function Contact() {
             </h2>
           </TextReveal>
         </div>
+
+        {/* Contact form */}
+        <FadeUp delay={0.1} className="max-w-lg mb-4">
+          <ContactForm />
+        </FadeUp>
 
         {/* Social links */}
         <div className="flex flex-wrap gap-8 mb-24">

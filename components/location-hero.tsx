@@ -3,6 +3,8 @@
 import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
+import { ArrowLeft } from "lucide-react"
 import { TextReveal } from "./animations/text-reveal"
 import type { Location } from "@/content/types"
 
@@ -23,8 +25,8 @@ export function LocationHero({ location }: LocationHeroProps) {
 
   return (
     <div ref={ref} className="relative h-screen w-full overflow-hidden">
-      {/* Parallax image */}
-      <motion.div style={{ y }} className="absolute inset-0 scale-[1.35]">
+      {/* Parallax image — scale in motion style to avoid Framer transform override */}
+      <motion.div style={{ y, scale: 1.35 }} className="absolute inset-0">
         <Image
           src={heroPhoto.src}
           alt={heroPhoto.alt}
@@ -36,6 +38,17 @@ export function LocationHero({ location }: LocationHeroProps) {
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
+
+      {/* Back button — below the fixed nav */}
+      <div className="absolute top-20 left-6 z-20">
+        <Link
+          href="/photography"
+          className="flex items-center gap-2 text-white/60 hover:text-white transition-colors text-xs tracking-[0.2em] uppercase group"
+        >
+          <ArrowLeft size={14} className="transition-transform group-hover:-translate-x-1" />
+          All locations
+        </Link>
+      </div>
 
       {/* Text */}
       <motion.div
