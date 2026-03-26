@@ -1,1 +1,19 @@
 .superpowers/
+
+# Next.js
+.next/
+out/
+
+# Node
+node_modules/
+
+# Build artifacts
+tsconfig.tsbuildinfo
+
+# Env files
+.env
+.env.local
+.env*.local
+
+# Vercel
+.vercel
