@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
-import { GitBranch, ExternalLink } from "lucide-react"
+import { ExternalLink } from "lucide-react"
+import { FaGithub } from "react-icons/fa"
 import type { Project } from "@/content/types"
 import { FadeUp } from "./animations/fade-up"
 
@@ -35,7 +36,7 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
                   className="text-muted hover:text-foreground transition-colors"
                   aria-label="GitHub repository"
                 >
-                  <GitBranch size={15} />
+                  <FaGithub size={15} />
                 </Link>
               )}
               {project.live && (

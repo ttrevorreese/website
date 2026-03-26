@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { GitBranch } from "lucide-react"
+import { FaGithub } from "react-icons/fa"
 import { TextReveal } from "./animations/text-reveal"
 import { FadeUp } from "./animations/fade-up"
 import { ProjectCard } from "./project-card"
@@ -42,7 +42,7 @@ export function CodeSection() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-3 border border-border px-6 py-3 text-xs tracking-[0.2em] uppercase hover:bg-card transition-colors"
         >
-          <GitBranch size={15} />
+          <FaGithub size={15} />
           View all on GitHub
         </Link>
       </FadeUp>

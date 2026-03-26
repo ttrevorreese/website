@@ -1,14 +1,14 @@
 import Link from "next/link"
-import { GitBranch, Link2, Camera, Mail } from "lucide-react"
+import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
 import { TextReveal } from "./animations/text-reveal"
 import { FadeUp } from "./animations/fade-up"
 import { profile } from "@/content/profile"
 
 const socials = [
-  { label: "Email", href: profile.social.email, icon: Mail },
-  { label: "GitHub", href: profile.social.github, icon: GitBranch },
-  { label: "LinkedIn", href: profile.social.linkedin, icon: Link2 },
-  { label: "Instagram", href: profile.social.instagram, icon: Camera },
+  { label: "Email", href: profile.social.email, icon: FaEnvelope },
+  { label: "GitHub", href: profile.social.github, icon: FaGithub },
+  { label: "LinkedIn", href: profile.social.linkedin, icon: FaLinkedin },
+  { label: "Instagram", href: profile.social.instagram, icon: FaInstagram },
 ]
 
 export function Contact() {
