@@ -15,6 +15,7 @@ export function Hero() {
         alt="Hero background — travel landscape"
         className="absolute inset-0 h-full w-full"
         strength={25}
+        priority
       />
 
       {/* Dark overlay */}
@@ -30,22 +31,32 @@ export function Hero() {
         </TextReveal>
 
         {/* Name — split across two lines */}
-        <TextReveal delay={0.25}>
-          <h1
-            className="text-5xl sm:text-7xl md:text-8xl font-light tracking-[0.15em] uppercase"
-            style={{ fontFamily: "var(--font-playfair)" }}
-          >
-            {profile.name.split(" ")[0]}
-          </h1>
-        </TextReveal>
-        <TextReveal delay={0.35}>
-          <h1
-            className="text-5xl sm:text-7xl md:text-8xl font-light tracking-[0.15em] uppercase"
-            style={{ fontFamily: "var(--font-playfair)" }}
-          >
-            {profile.name.split(" ")[1]}
-          </h1>
-        </TextReveal>
+        {(() => {
+          const [first, ...rest] = profile.name.split(" ")
+          const last = rest.join(" ")
+          return (
+            <>
+              <TextReveal delay={0.25}>
+                <h1
+                  className="text-5xl sm:text-7xl md:text-8xl font-light tracking-[0.15em] uppercase"
+                  style={{ fontFamily: "var(--font-playfair)" }}
+                >
+                  {first}
+                </h1>
+              </TextReveal>
+              {last && (
+                <TextReveal delay={0.35}>
+                  <div
+                    className="text-5xl sm:text-7xl md:text-8xl font-light tracking-[0.15em] uppercase"
+                    style={{ fontFamily: "var(--font-playfair)" }}
+                  >
+                    {last}
+                  </div>
+                </TextReveal>
+              )}
+            </>
+          )
+        })()}
       </div>
 
       {/* Scroll indicator */}
