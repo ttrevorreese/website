@@ -30,7 +30,7 @@ export function ParallaxImage({
 
   return (
     <div ref={ref} className={cn("relative overflow-hidden", className)}>
-      <motion.div style={{ y }} className="absolute inset-0 scale-[1.35]">
+      <motion.div style={{ y, scale: 1.35 }} className="absolute inset-0">
         <Image src={src} alt={alt} fill className="object-cover" priority={priority} />
       </motion.div>
     </div>

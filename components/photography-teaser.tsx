@@ -11,7 +11,7 @@ export function PhotographyTeaser() {
   return (
     <section id="photography" className="py-32 px-6">
       {/* Section header */}
-      <div className="max-w-7xl mx-auto mb-16 flex items-end justify-between">
+      <div className="max-w-5xl mx-auto mb-16 flex items-end justify-between">
         <div>
           <TextReveal wrapperClassName="mb-4">
             <p className="text-xs tracking-[0.35em] uppercase text-muted">Photography</p>
@@ -40,8 +40,8 @@ export function PhotographyTeaser() {
       </div>
 
       {/* Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4">
-        {featured.map((location, i) => (
+      <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {featured.slice(0, 3).map((location, i) => (
           <FadeUp key={location.slug} delay={i * 0.1}>
             <LocationCard location={location} />
           </FadeUp>
