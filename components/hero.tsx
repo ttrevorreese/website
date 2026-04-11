@@ -33,7 +33,8 @@ export function Hero() {
         src="https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600/IMG_1564-566_gldg6s.jpg"
         alt="Hero background — travel landscape"
         className="absolute inset-0 h-full w-full"
-        strength={25}
+        strength={60}
+        objectPosition="top"
         priority
       />
 

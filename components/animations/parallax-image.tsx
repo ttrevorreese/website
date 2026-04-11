@@ -11,6 +11,8 @@ interface ParallaxImageProps {
   className?: string
   /** How much to shift (percentage). Default 30 */
   strength?: number
+  /** CSS object-position value. Default "center" */
+  objectPosition?: string
   priority?: boolean
 }
 
@@ -19,6 +21,7 @@ export function ParallaxImage({
   alt,
   className,
   strength = 30,
+  objectPosition = "center",
   priority = false,
 }: ParallaxImageProps) {
   const ref = useRef(null)
@@ -27,11 +30,20 @@ export function ParallaxImage({
     offset: ["start start", "end start"],
   })
   const y = useTransform(scrollYProgress, [0, 1], [`-${strength / 2}%`, `${strength / 2}%`])
+  // Scale must cover the full travel distance: 1 + (strength / 100)
+  const scale = 1 + strength / 100
 
   return (
     <div ref={ref} className={cn("relative overflow-hidden", className)}>
-      <motion.div style={{ y, scale: 1.35 }} className="absolute inset-0">
-        <Image src={src} alt={alt} fill className="object-cover" priority={priority} />
+      <motion.div style={{ y, scale }} className="absolute inset-0">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          className="object-cover"
+          style={{ objectPosition }}
+          priority={priority}
+        />
       </motion.div>
     </div>
   )
