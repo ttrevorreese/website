@@ -91,10 +91,43 @@ Currently uses **Unsplash placeholder URLs**. Real photos will be served from **
 
 **Pending:** Add `res.cloudinary.com` to allowed image hosts, then replace all Unsplash URLs with real Cloudinary URLs.
 
+**Cloud name:** `dyqdtpd3b`
+
 Cloudinary URL format:
 ```
-https://res.cloudinary.com/{cloud-name}/image/upload/w_1200,h_800,c_fill,f_auto,q_auto/{folder}/{filename}
+https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/{folder}/{filename}
 ```
+
+**Mains folder naming convention** (files must be in Cloudinary `/mains/` folder):
+```
+{year}_{location_slug}_cover.jpg   ← index card (800×1000 portrait)
+{year}_{location_slug}_hero.jpg    ← location page hero (1600×900 landscape)
+```
+
+Location slugs used in code:
+| Cloudinary key | Slug |
+|---|---|
+| 2019_chicago | chicago |
+| 2021_edinburgh | edinburgh |
+| 2021_lake_tahoe | lake-tahoe |
+| 2021_shrewsbury_and_ironbridge | shrewsbury-ironbridge |
+| 2022_berlin | berlin |
+| 2022_copenhagen | copenhagen |
+| 2022_hamburg | hamburg |
+| 2022_murrieta_car_show | murrieta-car-show-2022 |
+| 2022_prague | prague |
+| 2022_roehampton_snow | roehampton-snow |
+| 2022_shropshire_hills | shropshire-hills |
+| 2023_boise | boise |
+| 2023_bratislava | bratislava |
+| 2023_budapest | budapest |
+| 2023_murrieta_car_show | murrieta-car-show-2023 |
+| 2023_vienna | vienna |
+| 2023_york | york |
+| 2024_richmond_park | richmond-park |
+
+**Featured locations** (shown on homepage teaser — 3 max):
+Edinburgh, Prague, Budapest
 
 ### Profile (`content/profile.ts`)
 Contains bio text, social links (GitHub, LinkedIn, Instagram, Etsy), and profile photo path.
@@ -108,8 +141,9 @@ Featured code projects with GitHub/live links.
 
 - **Platform:** Vercel
 - **Branch:** `main` → auto-deploys to production
-- **Custom domain:** purchased via Vercel — **needs to be connected in Vercel project settings** (in progress)
-- **Image hosts allowed:** `images.unsplash.com` (temporary), `res.cloudinary.com` (pending)
+- **Custom domain:** `ttrevorreese.com` — live and aliased automatically by Vercel
+- **Vercel project:** `trevorreese2002-2663s-projects/website` (project ID: `prj_O5cEaPZC6zgncvWTLy6PmM7CJrIf`)
+- **Image hosts allowed:** `images.unsplash.com` (temporary), `res.cloudinary.com` (added)
 
 ---
 
@@ -135,10 +169,14 @@ Featured code projects with GitHub/live links.
 - [x] Mobile hamburger menu
 
 ### In Progress
-- [ ] Connect custom Vercel domain to the project
-- [ ] Upload real photos to Cloudinary
-- [ ] Add `res.cloudinary.com` to `next.config.ts` image hosts
-- [ ] Replace Unsplash placeholders in `content/locations.ts` with real Cloudinary URLs
+- [x] Deploy to Vercel production (`ttrevorreese.com` live)
+- [x] Add `res.cloudinary.com` to `next.config.ts` image hosts
+- [x] Replace hero image (`components/hero.tsx`) with real Cloudinary URL
+- [x] Replace profile photo (`content/profile.ts`) with real Cloudinary URL
+- [x] Replace all Unsplash placeholders in `content/locations.ts` with Cloudinary mains/ pattern
+- [ ] Upload real photos to Cloudinary (in progress — user uploading)
+- [ ] Create `mains/` folder in Cloudinary with cover+hero per location (see naming convention below)
+- [ ] Add individual grid photos to each location's `photos[]` array once filenames are known
 
 ### Pending
 - [ ] Replace profile photo placeholder in `content/profile.ts`

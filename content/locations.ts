@@ -1,147 +1,279 @@
 import type { Location } from "./types"
 
+// Cloudinary base — transformations applied inline
+// Cover images: 800×1000 portrait crop (location index cards)
+// Hero images:  1600×900 landscape crop (location page parallax hero)
+// All grid photos: f_auto,q_auto for format/quality optimization
+//
+// Mains folder naming convention (must match files in Cloudinary /mains/ folder):
+//   {year}_{location_slug}_cover.jpg  — index card cover
+//   {year}_{location_slug}_hero.jpg   — location page hero
+//
+// Grid photos: add individual photo URLs to each location's photos[] array
+// once filenames are available from Cloudinary folders.
+
+const cdn = (path: string, transforms = "f_auto,q_auto") =>
+  `https://res.cloudinary.com/dyqdtpd3b/image/upload/${transforms}/${path}`
+
+const cover = (key: string) =>
+  cdn(`mains/${key}_cover.jpg`, "f_auto,q_auto,w_800,h_1000,c_fill")
+
+const hero = (key: string) =>
+  cdn(`mains/${key}_hero.jpg`, "f_auto,q_auto,w_1600,h_900,c_fill")
+
 export const locations: Location[] = [
+  // ── 2019 ──────────────────────────────────────────────────────────────────
+  {
+    slug: "chicago",
+    name: "Chicago",
+    country: "USA",
+    year: 2019,
+    featured: false,
+    galleryStyle: "editorial",
+    coverImage: cover("2019_chicago"),
+    photos: [
+      { src: hero("2019_chicago"), alt: "Chicago", width: 1600, height: 900 },
+    ],
+  },
+
+  // ── 2021 ──────────────────────────────────────────────────────────────────
+  {
+    slug: "edinburgh",
+    name: "Edinburgh",
+    country: "Scotland",
+    year: 2021,
+    featured: true,
+    galleryStyle: "editorial",
+    coverImage: cover("2021_edinburgh"),
+    photos: [
+      { src: hero("2021_edinburgh"), alt: "Edinburgh", width: 1600, height: 900 },
+    ],
+  },
+  {
+    slug: "lake-tahoe",
+    name: "Lake Tahoe",
+    country: "USA",
+    year: 2021,
+    featured: false,
+    galleryStyle: "masonry",
+    coverImage: cover("2021_lake_tahoe"),
+    photos: [
+      { src: hero("2021_lake_tahoe"), alt: "Lake Tahoe", width: 1600, height: 900 },
+    ],
+  },
+  {
+    slug: "shrewsbury-ironbridge",
+    name: "Shrewsbury & Ironbridge",
+    country: "England",
+    year: 2021,
+    featured: false,
+    galleryStyle: "editorial",
+    coverImage: cover("2021_shrewsbury_and_ironbridge"),
+    photos: [
+      {
+        src: hero("2021_shrewsbury_and_ironbridge"),
+        alt: "Shrewsbury & Ironbridge",
+        width: 1600,
+        height: 900,
+      },
+    ],
+  },
+
+  // ── 2022 ──────────────────────────────────────────────────────────────────
+  {
+    slug: "berlin",
+    name: "Berlin",
+    country: "Germany",
+    year: 2022,
+    featured: false,
+    galleryStyle: "editorial",
+    coverImage: cover("2022_berlin"),
+    photos: [
+      { src: hero("2022_berlin"), alt: "Berlin", width: 1600, height: 900 },
+    ],
+  },
   {
     slug: "copenhagen",
     name: "Copenhagen",
     country: "Denmark",
-    year: 2024,
-    featured: true,
+    year: 2022,
+    featured: false,
     galleryStyle: "editorial",
-    coverImage:
-      "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=800&h=1000&fit=crop",
+    coverImage: cover("2022_copenhagen"),
     photos: [
-      {
-        src: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=1200&h=800&fit=crop",
-        alt: "Copenhagen canal at golden hour",
-        width: 1200,
-        height: 800,
-      },
-      {
-        src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
-        alt: "Colourful Nyhavn boats",
-        width: 800,
-        height: 1200,
-      },
-      {
-        src: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=800&fit=crop",
-        alt: "Copenhagen street scene",
-        width: 1200,
-        height: 800,
-      },
-    ],
-    sublocations: [
-      {
-        name: "Parks",
-        photos: [
-          {
-            src: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&h=800&fit=crop",
-            alt: "Park path in autumn",
-            width: 1200,
-            height: 800,
-          },
-          {
-            src: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&h=1200&fit=crop",
-            alt: "Formal garden",
-            width: 800,
-            height: 1200,
-          },
-        ],
-      },
-      {
-        name: "Castles",
-        photos: [
-          {
-            src: "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=1200&h=800&fit=crop",
-            alt: "Castle reflected in water",
-            width: 1200,
-            height: 800,
-          },
-        ],
-      },
+      { src: hero("2022_copenhagen"), alt: "Copenhagen", width: 1600, height: 900 },
     ],
   },
   {
-    slug: "tokyo",
-    name: "Tokyo",
-    country: "Japan",
-    year: 2024,
-    featured: true,
+    slug: "hamburg",
+    name: "Hamburg",
+    country: "Germany",
+    year: 2022,
+    featured: false,
     galleryStyle: "masonry",
-    coverImage:
-      "https://images.unsplash.com/photo-1480796927426-f609979314bd?w=800&h=1000&fit=crop",
+    coverImage: cover("2022_hamburg"),
     photos: [
-      {
-        src: "https://images.unsplash.com/photo-1480796927426-f609979314bd?w=1200&h=800&fit=crop",
-        alt: "Tokyo skyline at night",
-        width: 1200,
-        height: 800,
-      },
-      {
-        src: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&h=1200&fit=crop",
-        alt: "Tokyo street at dusk",
-        width: 800,
-        height: 1200,
-      },
-      {
-        src: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1200&h=900&fit=crop",
-        alt: "Shibuya crossing",
-        width: 1200,
-        height: 900,
-      },
-      {
-        src: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=900&h=1200&fit=crop",
-        alt: "Temple gate at dawn",
-        width: 900,
-        height: 1200,
-      },
+      { src: hero("2022_hamburg"), alt: "Hamburg", width: 1600, height: 900 },
     ],
   },
   {
-    slug: "patagonia",
-    name: "Patagonia",
-    country: "Chile",
-    year: 2023,
-    featured: true,
-    galleryStyle: "editorial",
-    coverImage:
-      "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&h=1000&fit=crop",
+    slug: "murrieta-car-show-2022",
+    name: "Murrieta Car Show",
+    country: "USA",
+    year: 2022,
+    featured: false,
+    galleryStyle: "masonry",
+    coverImage: cover("2022_murrieta_car_show"),
     photos: [
       {
-        src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1600&h=900&fit=crop",
-        alt: "Torres del Paine at sunrise",
+        src: hero("2022_murrieta_car_show"),
+        alt: "Murrieta Car Show 2022",
         width: 1600,
         height: 900,
       },
+    ],
+  },
+  {
+    slug: "prague",
+    name: "Prague",
+    country: "Czech Republic",
+    year: 2022,
+    featured: true,
+    galleryStyle: "editorial",
+    coverImage: cover("2022_prague"),
+    photos: [
+      { src: hero("2022_prague"), alt: "Prague", width: 1600, height: 900 },
+    ],
+  },
+  {
+    slug: "roehampton-snow",
+    name: "Roehampton Snow",
+    country: "England",
+    year: 2022,
+    featured: false,
+    galleryStyle: "masonry",
+    coverImage: cover("2022_roehampton_snow"),
+    photos: [
       {
-        src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&h=800&fit=crop",
-        alt: "Mountain reflected in glacial lake",
-        width: 1200,
-        height: 800,
+        src: hero("2022_roehampton_snow"),
+        alt: "Roehampton in the snow",
+        width: 1600,
+        height: 900,
       },
     ],
   },
   {
-    slug: "santorini",
-    name: "Santorini",
-    country: "Greece",
+    slug: "shropshire-hills",
+    name: "Shropshire Hills",
+    country: "England",
+    year: 2022,
+    featured: false,
+    galleryStyle: "editorial",
+    coverImage: cover("2022_shropshire_hills"),
+    photos: [
+      {
+        src: hero("2022_shropshire_hills"),
+        alt: "Shropshire Hills",
+        width: 1600,
+        height: 900,
+      },
+    ],
+  },
+
+  // ── 2023 ──────────────────────────────────────────────────────────────────
+  {
+    slug: "boise",
+    name: "Boise",
+    country: "USA",
     year: 2023,
     featured: false,
     galleryStyle: "masonry",
-    coverImage:
-      "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=800&h=1000&fit=crop",
+    coverImage: cover("2023_boise"),
+    photos: [
+      { src: hero("2023_boise"), alt: "Boise", width: 1600, height: 900 },
+    ],
+  },
+  {
+    slug: "bratislava",
+    name: "Bratislava",
+    country: "Slovakia",
+    year: 2023,
+    featured: false,
+    galleryStyle: "editorial",
+    coverImage: cover("2023_bratislava"),
+    photos: [
+      { src: hero("2023_bratislava"), alt: "Bratislava", width: 1600, height: 900 },
+    ],
+  },
+  {
+    slug: "budapest",
+    name: "Budapest",
+    country: "Hungary",
+    year: 2023,
+    featured: true,
+    galleryStyle: "editorial",
+    coverImage: cover("2023_budapest"),
+    photos: [
+      { src: hero("2023_budapest"), alt: "Budapest", width: 1600, height: 900 },
+    ],
+  },
+  {
+    slug: "murrieta-car-show-2023",
+    name: "Murrieta Car Show",
+    country: "USA",
+    year: 2023,
+    featured: false,
+    galleryStyle: "masonry",
+    coverImage: cover("2023_murrieta_car_show"),
     photos: [
       {
-        src: "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=1200&h=900&fit=crop",
-        alt: "Oia village with blue domes",
-        width: 1200,
+        src: hero("2023_murrieta_car_show"),
+        alt: "Murrieta Car Show 2023",
+        width: 1600,
         height: 900,
       },
+    ],
+  },
+  {
+    slug: "vienna",
+    name: "Vienna",
+    country: "Austria",
+    year: 2023,
+    featured: false,
+    galleryStyle: "editorial",
+    coverImage: cover("2023_vienna"),
+    photos: [
+      { src: hero("2023_vienna"), alt: "Vienna", width: 1600, height: 900 },
+    ],
+  },
+  {
+    slug: "york",
+    name: "York",
+    country: "England",
+    year: 2023,
+    featured: false,
+    galleryStyle: "editorial",
+    coverImage: cover("2023_york"),
+    photos: [
+      { src: hero("2023_york"), alt: "York", width: 1600, height: 900 },
+    ],
+  },
+
+  // ── 2024 ──────────────────────────────────────────────────────────────────
+  {
+    slug: "richmond-park",
+    name: "Richmond Park",
+    country: "England",
+    year: 2024,
+    featured: false,
+    galleryStyle: "masonry",
+    coverImage: cover("2024_richmond_park"),
+    photos: [
       {
-        src: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=900&h=1200&fit=crop",
-        alt: "Whitewashed steps at sunset",
-        width: 900,
-        height: 1200,
+        src: hero("2024_richmond_park"),
+        alt: "Richmond Park",
+        width: 1600,
+        height: 900,
       },
     ],
   },

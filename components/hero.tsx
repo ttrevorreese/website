@@ -30,7 +30,7 @@ export function Hero() {
     >
       {/* Parallax background */}
       <ParallaxImage
-        src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&h=1000&fit=crop"
+        src="https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600/IMG_1564-566_gldg6s.jpg"
         alt="Hero background — travel landscape"
         className="absolute inset-0 h-full w-full"
         strength={25}

@@ -9,7 +9,7 @@ export const profile: Profile = {
     "My work lives at the intersection of craft and curiosity. Whether I'm shipping code or chasing light in a new city, I care about getting the details right.",
     "This site is where both sides of that work live together.",
   ],
-  photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop&crop=face",
+  photo: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_600/TR_Headshot_Green_Square_a0xaym.jpg",
   social: {
     email: "mailto:hello@trevorreese.com", // [REPLACE]
     github: "https://github.com/ttrevorreese",
