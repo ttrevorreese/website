@@ -2,10 +2,14 @@
 
 import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ParallaxImage } from "./animations/parallax-image"
+import { HeroPhotoStrip } from "./hero-photo-strip"
 import { TextReveal } from "./animations/text-reveal"
 import { ChevronDown } from "lucide-react"
 import { profile } from "@/content/profile"
+
+// TEST: single photo duplicated 10× — replace with real photo array later
+const HERO_PHOTO = "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/IMG_1564-566_gldg6s.jpg"
+const heroPhotos = Array(10).fill(HERO_PHOTO)
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -28,15 +32,8 @@ export function Hero() {
       ref={sectionRef}
       className="relative h-screen w-full flex items-center justify-center overflow-hidden"
     >
-      {/* Parallax background */}
-      <ParallaxImage
-        src="https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600/IMG_1564-566_gldg6s.jpg"
-        alt="Hero background — travel landscape"
-        className="absolute inset-0 h-full w-full"
-        strength={60}
-        objectPosition="top"
-        priority
-      />
+      {/* Scrolling photo strip */}
+      <HeroPhotoStrip photos={heroPhotos} duration={35} />
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/55" />
