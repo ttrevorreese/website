@@ -171,6 +171,7 @@ Featured code projects with GitHub/live links.
 ### In Progress
 - [x] Deploy to Vercel production (`ttrevorreese.com` live)
 - [x] Add `res.cloudinary.com` to `next.config.ts` image hosts
+- [x] Replace hero with infinite scrolling photo strip (`components/hero-photo-strip.tsx`)
 - [x] Replace hero image (`components/hero.tsx`) with real Cloudinary URL
 - [x] Replace profile photo (`content/profile.ts`) with real Cloudinary URL
 - [x] Replace all Unsplash placeholders in `content/locations.ts` with Cloudinary mains/ pattern
@@ -179,8 +180,8 @@ Featured code projects with GitHub/live links.
 - [ ] Add individual grid photos to each location's `photos[]` array once filenames are known
 
 ### Pending
-- [ ] Replace profile photo placeholder in `content/profile.ts`
-- [ ] Replace bio placeholder text in `content/profile.ts`
+- [x] Replace profile photo placeholder in `content/profile.ts`
+- [x] Replace bio and social links in `content/profile.ts` (tagline, location, email, LinkedIn, Instagram)
 - [ ] Replace placeholder projects in `content/projects.ts` with real projects
 
 ---

@@ -1,25 +1,13 @@
 import type { Location } from "./types"
 
-// Cloudinary base — transformations applied inline
-// Cover images: 800×1000 portrait crop (location index cards)
-// Hero images:  1600×900 landscape crop (location page parallax hero)
-// All grid photos: f_auto,q_auto for format/quality optimization
-//
-// Mains folder naming convention (must match files in Cloudinary /mains/ folder):
-//   {year}_{location_slug}_cover.jpg  — index card cover
-//   {year}_{location_slug}_hero.jpg   — location page hero
-//
-// Grid photos: add individual photo URLs to each location's photos[] array
-// once filenames are available from Cloudinary folders.
-
 const cdn = (path: string, transforms = "f_auto,q_auto") =>
   `https://res.cloudinary.com/dyqdtpd3b/image/upload/${transforms}/${path}`
 
-const cover = (key: string) =>
-  cdn(`mains/${key}_cover.jpg`, "f_auto,q_auto,w_800,h_1000,c_fill")
+const cover = (id: string) =>
+  cdn(`mains/${id}.jpg`, "f_auto,q_auto,w_800,h_1000,c_fill")
 
-const hero = (key: string) =>
-  cdn(`mains/${key}_hero.jpg`, "f_auto,q_auto,w_1600,h_900,c_fill")
+const hero = (id: string) =>
+  cdn(`mains/${id}.jpg`, "f_auto,q_auto,w_1600,h_900,c_fill")
 
 export const locations: Location[] = [
   // ── 2019 ──────────────────────────────────────────────────────────────────
@@ -30,9 +18,9 @@ export const locations: Location[] = [
     year: 2019,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: cover("2019_chicago"),
+    coverImage: cover("2019_chicago_cover_hfl94t"),
     photos: [
-      { src: hero("2019_chicago"), alt: "Chicago", width: 1600, height: 900 },
+      { src: hero("2019_chicago_hero_oasna0"), alt: "Chicago", width: 1600, height: 900 },
     ],
   },
 
@@ -44,9 +32,9 @@ export const locations: Location[] = [
     year: 2021,
     featured: true,
     galleryStyle: "editorial",
-    coverImage: cover("2021_edinburgh"),
+    coverImage: cover("2021_edinburgh_cover_pqaxvp"),
     photos: [
-      { src: hero("2021_edinburgh"), alt: "Edinburgh", width: 1600, height: 900 },
+      { src: hero("2021_edinburgh_hero_tnsqmi"), alt: "Edinburgh", width: 1600, height: 900 },
     ],
   },
   {
@@ -56,9 +44,9 @@ export const locations: Location[] = [
     year: 2021,
     featured: false,
     galleryStyle: "masonry",
-    coverImage: cover("2021_lake_tahoe"),
+    coverImage: cover("2021_lake_tahoe_cover_f6lkzh"),
     photos: [
-      { src: hero("2021_lake_tahoe"), alt: "Lake Tahoe", width: 1600, height: 900 },
+      { src: hero("2021_lake_tahoe_hero_t5xibs"), alt: "Lake Tahoe", width: 1600, height: 900 },
     ],
   },
   {
@@ -68,10 +56,10 @@ export const locations: Location[] = [
     year: 2021,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: cover("2021_shrewsbury_and_ironbridge"),
+    coverImage: cover("2021_shrewsbury_and_ironbridge_cover_naakhn"),
     photos: [
       {
-        src: hero("2021_shrewsbury_and_ironbridge"),
+        src: hero("2021_shrewsbury_and_ironbridge_hero_eevzoz"),
         alt: "Shrewsbury & Ironbridge",
         width: 1600,
         height: 900,
@@ -87,9 +75,9 @@ export const locations: Location[] = [
     year: 2022,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: cover("2022_berlin"),
+    coverImage: cover("2022_berlin_cover_xjw0gf"),
     photos: [
-      { src: hero("2022_berlin"), alt: "Berlin", width: 1600, height: 900 },
+      { src: hero("2022_berlin_hero_f4dc37"), alt: "Berlin", width: 1600, height: 900 },
     ],
   },
   {
@@ -99,9 +87,9 @@ export const locations: Location[] = [
     year: 2022,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: cover("2022_copenhagen"),
+    coverImage: cover("2022_copenhagen_cover_nv8ver"),
     photos: [
-      { src: hero("2022_copenhagen"), alt: "Copenhagen", width: 1600, height: 900 },
+      { src: hero("2022_copenhagen_hero_nus1qq"), alt: "Copenhagen", width: 1600, height: 900 },
     ],
   },
   {
@@ -111,9 +99,9 @@ export const locations: Location[] = [
     year: 2022,
     featured: false,
     galleryStyle: "masonry",
-    coverImage: cover("2022_hamburg"),
+    coverImage: cover("2022_hamburg_cover_oegrxq"),
     photos: [
-      { src: hero("2022_hamburg"), alt: "Hamburg", width: 1600, height: 900 },
+      { src: hero("2022_hamburg_hero_lc1fbq"), alt: "Hamburg", width: 1600, height: 900 },
     ],
   },
   {
@@ -123,10 +111,10 @@ export const locations: Location[] = [
     year: 2022,
     featured: false,
     galleryStyle: "masonry",
-    coverImage: cover("2022_murrieta_car_show"),
+    coverImage: cover("2022_murrieta_car_show_cover_qkzxjr"),
     photos: [
       {
-        src: hero("2022_murrieta_car_show"),
+        src: hero("2022_murrieta_car_show_hero_vjmcyk"),
         alt: "Murrieta Car Show 2022",
         width: 1600,
         height: 900,
@@ -140,23 +128,23 @@ export const locations: Location[] = [
     year: 2022,
     featured: true,
     galleryStyle: "editorial",
-    coverImage: cover("2022_prague"),
+    coverImage: cover("2022_prague_cover_bsgwo5"),
     photos: [
-      { src: hero("2022_prague"), alt: "Prague", width: 1600, height: 900 },
+      { src: hero("2022_prague_hero_gup77d"), alt: "Prague", width: 1600, height: 900 },
     ],
   },
   {
     slug: "roehampton-snow",
-    name: "Roehampton Snow",
+    name: "Snow in Roehampton",
     country: "England",
     year: 2022,
     featured: false,
     galleryStyle: "masonry",
-    coverImage: cover("2022_roehampton_snow"),
+    coverImage: cover("2022_snow_in_roehampton_cover_nwbqts"),
     photos: [
       {
-        src: hero("2022_roehampton_snow"),
-        alt: "Roehampton in the snow",
+        src: hero("2022_snow_in_roehampton_hero_ijvkua"),
+        alt: "Snow in Roehampton",
         width: 1600,
         height: 900,
       },
@@ -169,10 +157,10 @@ export const locations: Location[] = [
     year: 2022,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: cover("2022_shropshire_hills"),
+    coverImage: cover("2022_shropshire_hills_cover_fchv9e"),
     photos: [
       {
-        src: hero("2022_shropshire_hills"),
+        src: hero("2022_shropshire_hills_hero_loa9kj"),
         alt: "Shropshire Hills",
         width: 1600,
         height: 900,
@@ -188,9 +176,9 @@ export const locations: Location[] = [
     year: 2023,
     featured: false,
     galleryStyle: "masonry",
-    coverImage: cover("2023_boise"),
+    coverImage: cover("2023_boise_cover_qhuvur"),
     photos: [
-      { src: hero("2023_boise"), alt: "Boise", width: 1600, height: 900 },
+      { src: hero("2023_boise_hero_slshxs"), alt: "Boise", width: 1600, height: 900 },
     ],
   },
   {
@@ -200,9 +188,9 @@ export const locations: Location[] = [
     year: 2023,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: cover("2023_bratislava"),
+    coverImage: cover("2023_bratislava_cover_vdmwio"),
     photos: [
-      { src: hero("2023_bratislava"), alt: "Bratislava", width: 1600, height: 900 },
+      { src: hero("2023_bratislava_hero_hld9gi"), alt: "Bratislava", width: 1600, height: 900 },
     ],
   },
   {
@@ -212,9 +200,9 @@ export const locations: Location[] = [
     year: 2023,
     featured: true,
     galleryStyle: "editorial",
-    coverImage: cover("2023_budapest"),
+    coverImage: cover("2023_budapest_cover_u0ghhf"),
     photos: [
-      { src: hero("2023_budapest"), alt: "Budapest", width: 1600, height: 900 },
+      { src: hero("2023_budapest_hero_xzxcgt"), alt: "Budapest", width: 1600, height: 900 },
     ],
   },
   {
@@ -224,10 +212,10 @@ export const locations: Location[] = [
     year: 2023,
     featured: false,
     galleryStyle: "masonry",
-    coverImage: cover("2023_murrieta_car_show"),
+    coverImage: cover("2023_murrieta_car_show_cover_jqvq0s"),
     photos: [
       {
-        src: hero("2023_murrieta_car_show"),
+        src: hero("2023_murrieta_car_show_hero_r6az2f"),
         alt: "Murrieta Car Show 2023",
         width: 1600,
         height: 900,
@@ -241,9 +229,9 @@ export const locations: Location[] = [
     year: 2023,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: cover("2023_vienna"),
+    coverImage: cover("2023_vienna_cover_ivvyrb"),
     photos: [
-      { src: hero("2023_vienna"), alt: "Vienna", width: 1600, height: 900 },
+      { src: hero("2023_vienna_hero_khbrsd"), alt: "Vienna", width: 1600, height: 900 },
     ],
   },
   {
@@ -253,13 +241,37 @@ export const locations: Location[] = [
     year: 2023,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: cover("2023_york"),
+    coverImage: cover("2023_york_cover_wfqnjh"),
     photos: [
-      { src: hero("2023_york"), alt: "York", width: 1600, height: 900 },
+      { src: hero("2023_york_hero_rvdtrl"), alt: "York", width: 1600, height: 900 },
     ],
   },
 
   // ── 2024 ──────────────────────────────────────────────────────────────────
+  {
+    slug: "lake-vyrnwy",
+    name: "Lake Vyrnwy",
+    country: "Wales",
+    year: 2024,
+    featured: false,
+    galleryStyle: "editorial",
+    coverImage: cover("2024_lake_vyrnwy_cover_qkjuqi"),
+    photos: [
+      { src: hero("2024_lake_vyrnwy_hero_hhtwpq"), alt: "Lake Vyrnwy", width: 1600, height: 900 },
+    ],
+  },
+  {
+    slug: "much-wenlock",
+    name: "Much Wenlock",
+    country: "England",
+    year: 2024,
+    featured: false,
+    galleryStyle: "editorial",
+    coverImage: cover("2024_much_wenlock_cover_bmk9ha"),
+    photos: [
+      { src: hero("2024_much_wenlock_hero_uqa3na"), alt: "Much Wenlock", width: 1600, height: 900 },
+    ],
+  },
   {
     slug: "richmond-park",
     name: "Richmond Park",
@@ -267,10 +279,10 @@ export const locations: Location[] = [
     year: 2024,
     featured: false,
     galleryStyle: "masonry",
-    coverImage: cover("2024_richmond_park"),
+    coverImage: cover("2024_richmond_park_cover_ni4k9w"),
     photos: [
       {
-        src: hero("2024_richmond_park"),
+        src: hero("2024_richmond_park_hero_rydxad"),
         alt: "Richmond Park",
         width: 1600,
         height: 900,
