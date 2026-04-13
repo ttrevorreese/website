@@ -11,10 +11,10 @@ export const profile: Profile = {
   ],
   photo: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_600/TR_Headshot_Green_Square_a0xaym.jpg",
   social: {
-    email: "mailto:trevor.reese2002@gmail.com", // [REPLACE]
+    email: "mailto:trevor.reese2002@gmail.com",
     github: "https://github.com/ttrevorreese",
-    linkedin: "https://linkedin.com/in/ttrevorreese", // [REPLACE]
-    instagram: "https://instagram.com/ttrevorreese", // [REPLACE]
+    linkedin: "https://linkedin.com/in/ttrevorreese",
+    instagram: "https://instagram.com/ttrevorreese",
     etsy: "https://www.etsy.com/shop/PhotographyByTHR",
   },
 }
