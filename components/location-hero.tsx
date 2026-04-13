@@ -69,6 +69,13 @@ export function LocationHero({ location }: LocationHeroProps) {
             {location.name}
           </h1>
         </TextReveal>
+        {location.camera && (
+          <TextReveal delay={0.35}>
+            <p className="text-xs tracking-[0.4em] uppercase text-white/40 mt-4">
+              Shot on: {location.camera}
+            </p>
+          </TextReveal>
+        )}
       </motion.div>
     </div>
   )

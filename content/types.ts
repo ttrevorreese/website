@@ -19,6 +19,7 @@ export type Location = {
   galleryStyle: "masonry" | "editorial"
   year?: number
   featured?: boolean
+  camera?: string
   photos: Photo[]
   sublocations?: Sublocation[]
 }

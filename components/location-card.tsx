@@ -33,6 +33,11 @@ export function LocationCard({ location, className }: LocationCardProps) {
             {location.year ? ` · ${location.year}` : ""}
           </p>
           <p className="text-white text-lg font-light tracking-[0.1em]">{location.name}</p>
+          {location.camera && (
+            <p className="text-white/40 text-xs mt-1 tracking-[0.2em] uppercase">
+              Shot on: {location.camera}
+            </p>
+          )}
           <p className="text-white/40 text-xs mt-1 tracking-widest">{photoCount} photos</p>
         </div>
       </div>
