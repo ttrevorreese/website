@@ -39,11 +39,11 @@ export function LocationHero({ location }: LocationHeroProps) {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
 
-      {/* Back button — below the fixed nav */}
-      <div className="absolute top-20 left-6 z-20">
+      {/* Back button — fixed so it stays visible while scrolling */}
+      <div className="fixed top-20 left-6 z-50">
         <Link
           href="/photography"
-          className="flex items-center gap-2 text-white/60 hover:text-white transition-colors text-xs tracking-[0.2em] uppercase group"
+          className="flex items-center gap-2 bg-black/40 backdrop-blur-sm text-white/70 hover:text-white hover:bg-black/60 transition-all text-xs tracking-[0.2em] uppercase group px-3 py-2"
         >
           <ArrowLeft size={14} className="transition-transform group-hover:-translate-x-1" />
           All locations
