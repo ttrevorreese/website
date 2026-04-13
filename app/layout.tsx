@@ -14,7 +14,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Trevor Reese — Photographer & Engineer",
+  title: "Trevor Reese",
   description: "Portfolio of Trevor Reese — software engineer and travel photographer.",
 }
 

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Dark background matching site theme -->
+  <rect width="100" height="100" fill="#0a0a0a" rx="8"/>
+  <!-- R rendered first so T overlaps it -->
+  <text
+    x="46"
+    y="76"
+    font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', serif"
+    font-size="54"
+    font-weight="400"
+    fill="#f0f0f0"
+  >R</text>
+  <!-- T rendered on top, higher and slightly overlapping R -->
+  <text
+    x="8"
+    y="63"
+    font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', serif"
+    font-size="64"
+    font-weight="400"
+    fill="#f0f0f0"
+  >T</text>
+</svg>
