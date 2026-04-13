@@ -74,16 +74,26 @@ async function fetchFolderPhotos(folder) {
   let nextCursor = null
 
   do {
-    const params = new URLSearchParams({ type: "upload", prefix: `${folder}/`, max_results: "500" })
+    // Use the Search API with asset_folder — works with Cloudinary's fixed-folder mode
+    const params = new URLSearchParams({
+      expression: `asset_folder="${folder}"`,
+      max_results: "500",
+    })
     if (nextCursor) params.set("next_cursor", nextCursor)
 
     const res = await fetch(
-      `https://api.cloudinary.com/v1_1/${CLOUD}/resources/image?${params}`,
+      `https://api.cloudinary.com/v1_1/${CLOUD}/resources/search?${params}`,
       { headers: { Authorization: `Basic ${AUTH}` } }
     )
     const data = await res.json()
 
     if (data.error) throw new Error(`Cloudinary error for "${folder}": ${data.error.message}`)
+
+    // Diagnostic: print first result's public_id on the very first folder to confirm structure
+    if (photos.length === 0 && data.resources?.length > 0) {
+      const sample = data.resources[0]
+      process.stdout.write(`[sample public_id: "${sample.public_id}"] `)
+    }
 
     photos.push(...(data.resources ?? []))
     nextCursor = data.next_cursor ?? null
