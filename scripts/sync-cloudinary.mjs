@@ -62,11 +62,11 @@ function cdnUrl(publicId, transforms = "f_auto,q_auto") {
 }
 
 function coverUrl(key) {
-  return cdnUrl(`mains/${key}.jpg`, "f_auto,q_auto,w_800,h_1000,c_fill")
+  return cdnUrl(`${key}.jpg`, "f_auto,q_auto,w_800,h_1000,c_fill")
 }
 
 function heroUrl(key) {
-  return cdnUrl(`mains/${key}.jpg`, "f_auto,q_auto,w_1600,h_900,c_fill")
+  return cdnUrl(`${key}.jpg`, "f_auto,q_auto,w_1600,h_900,c_fill")
 }
 
 async function fetchFolderPhotos(folder) {

@@ -4,10 +4,10 @@ const cdn = (path: string, transforms = "f_auto,q_auto") =>
   `https://res.cloudinary.com/dyqdtpd3b/image/upload/${transforms}/${path}`
 
 const cover = (id: string) =>
-  cdn(`mains/${id}.jpg`, "f_auto,q_auto,w_800,h_1000,c_fill")
+  cdn(`${id}.jpg`, "f_auto,q_auto,w_800,h_1000,c_fill")
 
 const hero = (id: string) =>
-  cdn(`mains/${id}.jpg`, "f_auto,q_auto,w_1600,h_900,c_fill")
+  cdn(`${id}.jpg`, "f_auto,q_auto,w_1600,h_900,c_fill")
 
 export const locations: Location[] = [
   {
@@ -17,9 +17,9 @@ export const locations: Location[] = [
     year: 2019,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2019_chicago_cover_hfl94t.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2019_chicago_cover_hfl94t.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2019_chicago_hero_oasna0.jpg", alt: "Chicago", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2019_chicago_hero_oasna0.jpg", alt: "Chicago", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_2762-3_ko1v49.jpg", alt: "Chicago 1", width: 5535, height: 3690 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_2773-4_cn8ghz.jpg", alt: "Chicago 2", width: 3682, height: 4602 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_2785-5_b1jqt3.jpg", alt: "Chicago 3", width: 3883, height: 3106 },
@@ -66,9 +66,9 @@ export const locations: Location[] = [
     year: 2021,
     featured: true,
     galleryStyle: "editorial",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2021_edinburgh_cover_pqaxvp.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2021_edinburgh_cover_pqaxvp.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2021_edinburgh_hero_tnsqmi.jpg", alt: "Edinburgh", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2021_edinburgh_hero_tnsqmi.jpg", alt: "Edinburgh", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_6450-1_ys6zl7.jpg", alt: "Edinburgh 1", width: 2574, height: 3861 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_6451-2_cath7h.jpg", alt: "Edinburgh 2", width: 2574, height: 3861 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_6452-3_k9ydmu.jpg", alt: "Edinburgh 3", width: 3861, height: 2574 },
@@ -533,9 +533,9 @@ export const locations: Location[] = [
     year: 2021,
     featured: false,
     galleryStyle: "masonry",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2021_lake_tahoe_cover_f6lkzh.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2021_lake_tahoe_cover_f6lkzh.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2021_lake_tahoe_hero_t5xibs.jpg", alt: "Lake Tahoe", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2021_lake_tahoe_hero_t5xibs.jpg", alt: "Lake Tahoe", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_6158_zfec16.jpg", alt: "Lake Tahoe 1", width: 3861, height: 2574 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_6158-1_qgmehs.jpg", alt: "Lake Tahoe 2", width: 3861, height: 2574 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_6159_xkzqva.jpg", alt: "Lake Tahoe 3", width: 3861, height: 2574 },
@@ -1006,9 +1006,9 @@ export const locations: Location[] = [
     year: 2021,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2021_shrewsbury_and_ironbridge_cover_naakhn.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2021_shrewsbury_and_ironbridge_cover_naakhn.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2021_shrewsbury_and_ironbridge_hero_eevzoz.jpg", alt: "Shrewsbury & Ironbridge", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2021_shrewsbury_and_ironbridge_hero_eevzoz.jpg", alt: "Shrewsbury & Ironbridge", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_5598-1-1_llfabu.jpg", alt: "Shrewsbury & Ironbridge 1", width: 3861, height: 2574 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_5599-2-2_npvsvh.jpg", alt: "Shrewsbury & Ironbridge 2", width: 3595, height: 2397 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_5599-2-3_iow6nm.jpg", alt: "Shrewsbury & Ironbridge 3", width: 3595, height: 2397 },
@@ -1247,9 +1247,9 @@ export const locations: Location[] = [
     year: 2022,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2022_berlin_cover_xjw0gf.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2022_berlin_cover_xjw0gf.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2022_berlin_hero_f4dc37.jpg", alt: "Berlin", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2022_berlin_hero_f4dc37.jpg", alt: "Berlin", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_8303_k1xzib.jpg", alt: "Berlin 1", width: 2574, height: 3861 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_8304_bkezen.jpg", alt: "Berlin 2", width: 3732, height: 2488 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_8305_z9wvgp.jpg", alt: "Berlin 3", width: 2574, height: 3861 },
@@ -1482,9 +1482,9 @@ export const locations: Location[] = [
     year: 2022,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2022_copenhagen_cover_nv8ver.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2022_copenhagen_cover_nv8ver.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2022_copenhagen_hero_nus1qq.jpg", alt: "Copenhagen", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2022_copenhagen_hero_nus1qq.jpg", alt: "Copenhagen", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_8046_l1tvqp.jpg", alt: "Copenhagen 1", width: 2574, height: 3861 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_8047_grnkhg.jpg", alt: "Copenhagen 2", width: 3861, height: 2574 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_8048_lrgaru.jpg", alt: "Copenhagen 3", width: 2251, height: 3377 },
@@ -1726,9 +1726,9 @@ export const locations: Location[] = [
     year: 2022,
     featured: false,
     galleryStyle: "masonry",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2022_hamburg_cover_oegrxq.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2022_hamburg_cover_oegrxq.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2022_hamburg_hero_lc1fbq.jpg", alt: "Hamburg", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2022_hamburg_hero_lc1fbq.jpg", alt: "Hamburg", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_8580_musyhi.jpg", alt: "Hamburg 1", width: 2574, height: 3861 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_8581_dkrjy8.jpg", alt: "Hamburg 2", width: 3762, height: 2508 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_8582_nbr7uy.jpg", alt: "Hamburg 3", width: 3826, height: 2551 },
@@ -1950,9 +1950,9 @@ export const locations: Location[] = [
     year: 2022,
     featured: false,
     galleryStyle: "masonry",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2022_murrieta_car_show_cover_qkzxjr.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2022_murrieta_car_show_cover_qkzxjr.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2022_murrieta_car_show_hero_vjmcyk.jpg", alt: "Murrieta Car Show", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2022_murrieta_car_show_hero_vjmcyk.jpg", alt: "Murrieta Car Show", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_7926_ubgx7r.jpg", alt: "Murrieta Car Show 1", width: 2441, height: 3662 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_7928_etveih.jpg", alt: "Murrieta Car Show 2", width: 2574, height: 3861 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_7929_upditx.jpg", alt: "Murrieta Car Show 3", width: 2574, height: 3861 },
@@ -2061,9 +2061,9 @@ export const locations: Location[] = [
     year: 2022,
     featured: true,
     galleryStyle: "editorial",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2022_prague_cover_bsgwo5.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2022_prague_cover_bsgwo5.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2022_prague_hero_gup77d.jpg", alt: "Prague", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2022_prague_hero_gup77d.jpg", alt: "Prague", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_7254_dznl0y.jpg", alt: "Prague 1", width: 2574, height: 3861 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_7255_oaxhpp.jpg", alt: "Prague 2", width: 2574, height: 3861 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_7256_v08gcd.jpg", alt: "Prague 3", width: 3861, height: 2574 },
@@ -2444,9 +2444,9 @@ export const locations: Location[] = [
     year: 2022,
     featured: false,
     galleryStyle: "masonry",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2022_snow_in_roehampton_cover_nwbqts.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2022_snow_in_roehampton_cover_nwbqts.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2022_snow_in_roehampton_hero_ijvkua.jpg", alt: "Snow in Roehampton", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2022_snow_in_roehampton_hero_ijvkua.jpg", alt: "Snow in Roehampton", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_8816_w4jqbd.jpg", alt: "Snow in Roehampton 1", width: 3861, height: 2574 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_8817_n3jtpt.jpg", alt: "Snow in Roehampton 2", width: 3861, height: 2574 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_8818_yek069.jpg", alt: "Snow in Roehampton 3", width: 3744, height: 2496 },
@@ -2624,9 +2624,9 @@ export const locations: Location[] = [
     year: 2022,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2022_shropshire_hills_cover_fchv9e.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2022_shropshire_hills_cover_fchv9e.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2022_shropshire_hills_hero_loa9kj.jpg", alt: "Shropshire Hills", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2022_shropshire_hills_hero_loa9kj.jpg", alt: "Shropshire Hills", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_7799_lia1uy.jpg", alt: "Shropshire Hills 1", width: 3861, height: 2574 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_7800_arsmeb.jpg", alt: "Shropshire Hills 2", width: 3861, height: 2574 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_7801_kll1et.jpg", alt: "Shropshire Hills 3", width: 2574, height: 3861 },
@@ -2753,9 +2753,9 @@ export const locations: Location[] = [
     year: 2023,
     featured: false,
     galleryStyle: "masonry",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2023_boise_cover_qhuvur.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2023_boise_cover_qhuvur.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2023_boise_hero_slshxs.jpg", alt: "Boise", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2023_boise_hero_slshxs.jpg", alt: "Boise", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_3159_oepm0f.jpg", alt: "Boise 1", width: 6720, height: 4480 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_3160_yz9cka.jpg", alt: "Boise 2", width: 6720, height: 4480 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_3161_zpmlxx.jpg", alt: "Boise 3", width: 4331, height: 6496 },
@@ -2953,9 +2953,9 @@ export const locations: Location[] = [
     year: 2023,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2023_bratislava_cover_vdmwio.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2023_bratislava_cover_vdmwio.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2023_bratislava_hero_hld9gi.jpg", alt: "Bratislava", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2023_bratislava_hero_hld9gi.jpg", alt: "Bratislava", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_0450_zpzudj.jpg", alt: "Bratislava 1", width: 6586, height: 4391 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_0451_z1nvjg.jpg", alt: "Bratislava 2", width: 6308, height: 4205 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_0452_dfxbxj.jpg", alt: "Bratislava 3", width: 6720, height: 4480 },
@@ -3425,9 +3425,9 @@ export const locations: Location[] = [
     year: 2023,
     featured: true,
     galleryStyle: "editorial",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2023_budapest_cover_u0ghhf.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2023_budapest_cover_u0ghhf.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2023_budapest_hero_xzxcgt.jpg", alt: "Budapest", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2023_budapest_hero_xzxcgt.jpg", alt: "Budapest", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_0983_ebktje.jpg", alt: "Budapest 1", width: 6720, height: 4480 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_0984_d8ouqr.jpg", alt: "Budapest 2", width: 4480, height: 6720 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_0985_dnit02.jpg", alt: "Budapest 3", width: 4480, height: 6720 },
@@ -4380,9 +4380,9 @@ export const locations: Location[] = [
     year: 2023,
     featured: false,
     galleryStyle: "masonry",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2023_murrieta_car_show_cover_jqvq0s.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2023_murrieta_car_show_cover_jqvq0s.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2023_murrieta_car_show_hero_r6az2f.jpg", alt: "Murrieta Car Show", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2023_murrieta_car_show_hero_r6az2f.jpg", alt: "Murrieta Car Show", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_2986_ai9vgb.jpg", alt: "Murrieta Car Show 1", width: 6720, height: 4480 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_2987_vpr3yb.jpg", alt: "Murrieta Car Show 2", width: 6720, height: 4480 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_2988_cieknn.jpg", alt: "Murrieta Car Show 3", width: 6720, height: 4480 },
@@ -4575,9 +4575,9 @@ export const locations: Location[] = [
     year: 2023,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2023_vienna_cover_ivvyrb.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2023_vienna_cover_ivvyrb.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2023_vienna_hero_khbrsd.jpg", alt: "Vienna", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2023_vienna_hero_khbrsd.jpg", alt: "Vienna", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_0001_cbxirx.jpg", alt: "Vienna 1", width: 6566, height: 4377 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_0002_mdxnhx.jpg", alt: "Vienna 2", width: 6720, height: 4480 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_0003_yfx0ot.jpg", alt: "Vienna 3", width: 4325, height: 6488 },
@@ -5502,9 +5502,9 @@ export const locations: Location[] = [
     year: 2023,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2023_york_cover_wfqnjh.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2023_york_cover_wfqnjh.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2023_york_hero_rvdtrl.jpg", alt: "York", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2023_york_hero_rvdtrl.jpg", alt: "York", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_7993_o4wmlt.jpg", alt: "York 1", width: 6500, height: 4333 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_7994_eouyrb.jpg", alt: "York 2", width: 6614, height: 4409 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/IMG_7995_wlut8n.jpg", alt: "York 3", width: 4215, height: 6323 },
@@ -6185,9 +6185,9 @@ export const locations: Location[] = [
     year: 2024,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2024_lake_vyrnwy_cover_qkjuqi.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2024_lake_vyrnwy_cover_qkjuqi.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2024_lake_vyrnwy_hero_hhtwpq.jpg", alt: "Lake Vyrnwy", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2024_lake_vyrnwy_hero_hhtwpq.jpg", alt: "Lake Vyrnwy", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/20240526_111107_ta2ows.jpg", alt: "Lake Vyrnwy 1", width: 4000, height: 1868 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/20240526_111109_swgd4o.jpg", alt: "Lake Vyrnwy 2", width: 4000, height: 1868 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/20240526_111132_mlddcw.jpg", alt: "Lake Vyrnwy 3", width: 4000, height: 1868 },
@@ -6572,9 +6572,9 @@ export const locations: Location[] = [
     year: 2024,
     featured: false,
     galleryStyle: "editorial",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2024_much_wenlock_cover_bmk9ha.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2024_much_wenlock_cover_bmk9ha.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2024_much_wenlock_hero_uqa3na.jpg", alt: "Much Wenlock", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2024_much_wenlock_hero_uqa3na.jpg", alt: "Much Wenlock", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/20240525_115741_qkxoaz.jpg", alt: "Much Wenlock 1", width: 4000, height: 1868 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/20240525_115751_rik6cx.jpg", alt: "Much Wenlock 2", width: 4000, height: 1868 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/20240525_115754_oylbb2.jpg", alt: "Much Wenlock 3", width: 4000, height: 1868 },
@@ -6728,9 +6728,9 @@ export const locations: Location[] = [
     year: 2024,
     featured: false,
     galleryStyle: "masonry",
-    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/mains/2024_richmond_park_cover_ni4k9w.jpg",
+    coverImage: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800,h_1000,c_fill/2024_richmond_park_cover_ni4k9w.jpg",
     photos: [
-      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/mains/2024_richmond_park_hero_rydxad.jpg", alt: "Richmond Park", width: 1600, height: 900 },
+      { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_1600,h_900,c_fill/2024_richmond_park_hero_rydxad.jpg", alt: "Richmond Park", width: 1600, height: 900 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/20240527_165741_ldtyyh.jpg", alt: "Richmond Park 1", width: 1868, height: 4000 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/20240527_165744_dhtefk.jpg", alt: "Richmond Park 2", width: 1868, height: 4000 },
       { src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto/20240527_165756_pztysu.jpg", alt: "Richmond Park 3", width: 1868, height: 4000 },
