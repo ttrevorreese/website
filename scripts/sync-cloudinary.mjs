@@ -25,7 +25,7 @@ const CLOUD = "dyqdtpd3b"
 // ─── Hero photo folder ─────────────────────────────────────────────────────────
 // Set this to the exact Cloudinary folder name where you upload homepage hero photos.
 // e.g. "homepage hero" or "assets/hero"
-const HERO_FOLDER = "homepage hero"
+const HERO_FOLDER = "hero photos"
 const API_KEY = process.env.CLOUDINARY_API_KEY
 const API_SECRET = process.env.CLOUDINARY_API_SECRET
 
