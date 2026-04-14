@@ -21,7 +21,7 @@ export function PhotographyTeaser() {
               className="text-3xl sm:text-4xl font-light"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              Recent travels.
+              Featured travels.
             </h2>
           </TextReveal>
         </div>
