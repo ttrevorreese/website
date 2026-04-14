@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git config:*)",
+      "Bash(npm install:*)",
+      "Bash(git:*)",
+      "Bash(npx tsc:*)",
+      "Bash(node:*)",
+      "Bash(npm run:*)",
+      "Bash(agent-browser open:*)",
+      "Bash(agent-browser wait:*)",
+      "Bash(agent-browser screenshot:*)",
+      "Bash(curl:*)",
+      "Bash(sed -n '63,72p' content/locations.ts)",
+      "Bash(sed -n '2065,2074p' content/locations.ts)",
+      "Bash(sed -n '3434,3443p' content/locations.ts)",
+      "Bash(python3:*)"
+    ]
+  }
+}
