@@ -32,11 +32,13 @@ const AUTH = Buffer.from(`${API_KEY}:${API_SECRET}`).toString("base64")
 
 // Maps the filename stem (what the user named the file) to the project title in projects.ts
 const FILENAME_TO_TITLE = {
-  finalyearproject: "Murrieta Bus System",
-  website:          "Personal Portfolio",
-  Metronome:        "Metronome",
-  ambients:         "Ambient Reverie",
-  affirmations:     "The Affirmation Garden",
+  finalyearproject:   "Murrieta: Connected",
+  website:            "Personal Portfolio",
+  Metronome:          "Metronome",
+  ambients:           "Ambient Reverie",
+  affirmations:       "The Affirmation Garden",
+  cherished_memories: "Cherished Memories Photography",
+  infowink:           "Metronome",
 }
 
 function cdnUrl(publicId, format) {

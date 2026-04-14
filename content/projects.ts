@@ -1,8 +1,5 @@
 import type { Project } from "./types"
 
-// Images: upload to Cloudinary "code projects" folder, then replace the image field.
-// Cloudinary URL format: https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/{public_id}.jpg
-
 export const projects: Project[] = [
   {
     title: "Murrieta: Connected",
@@ -14,22 +11,12 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "Personal Portfolio",
+    title: "Cherished Memories Photography",
     description:
-      "This site — a full-stack portfolio built with Next.js and Framer Motion. Features a parallax hero strip, location-based photography galleries, and server-side image optimization via Cloudinary.",
-    tech: ["TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "Cloudinary"],
-    github: "https://github.com/ttrevorreese/website",
-    live: "https://ttrevorreese.com",
-    image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/Screenshot_2026-04-14_140940_ayby6i.png",
-    featured: true,
-  },
-  {
-    title: "Metronome",
-    description:
-      "Collaborative CRUD web app for tracking and reporting population data. Built with a team using an Express/PUG stack containerized in Docker, with a REST API for data management.",
-    tech: ["Python", "Node.js", "Express", "PUG", "Docker"],
-    github: "https://github.com/ttrevorreese/Metronome",
-    image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/infowink_o2kphc.jpg",
+      "Professional photography portfolio site built for a client. Features a gallery, booking flow, and contact management backed by Supabase, deployed on Vercel.",
+    tech: ["TypeScript", "JavaScript", "CSS", "Supabase", "Vercel"],
+    live: "https://cherishedmemoriesphotography.com",
+    image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/cherished_memories_xewqta.png",
     featured: true,
   },
   {
@@ -48,6 +35,26 @@ export const projects: Project[] = [
     tech: ["Python", "FLUX", "MusicGen", "FFmpeg"],
     live: "https://www.youtube.com/@The1AffirmationGarden",
     image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/affirmations_heb8jg.png",
+    featured: true,
+  },
+  {
+    title: "Metronome",
+    description:
+      "Collaborative CRUD web app for tracking and reporting population data. Built with a team using an Express/PUG stack containerized in Docker, with a REST API for data management.",
+    tech: ["Python", "Node.js", "Express", "PUG", "Docker"],
+    github: "https://github.com/ttrevorreese/Metronome",
+    image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/infowink_o2kphc.png",
+    imageContain: true,
+    featured: true,
+  },
+  {
+    title: "Personal Portfolio",
+    description:
+      "This site — a full-stack portfolio built with Next.js and Framer Motion. Features a parallax hero strip, location-based photography galleries, and server-side image optimization via Cloudinary.",
+    tech: ["TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "Cloudinary"],
+    github: "https://github.com/ttrevorreese/website",
+    live: "https://ttrevorreese.com",
+    image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/Screenshot_2026-04-14_140940_ayby6i.png",
     featured: true,
   },
 ]

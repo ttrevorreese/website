@@ -15,12 +15,12 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
     <FadeUp delay={delay}>
       <div className="bg-card border border-border overflow-hidden group">
         {project.image && (
-          <div className="relative aspect-video overflow-hidden">
+          <div className={`relative aspect-video overflow-hidden ${project.imageContain ? "bg-card" : ""}`}>
             <Image
               src={project.image}
               alt={project.title}
               fill
-              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              className={`${project.imageContain ? "object-contain p-6" : "object-cover"} grayscale group-hover:grayscale-0 transition-all duration-500`}
             />
           </div>
         )}

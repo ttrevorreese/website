@@ -32,6 +32,7 @@ export type Project = {
   github?: string
   live?: string
   image?: string
+  imageContain?: boolean
   featured: boolean
 }
 
