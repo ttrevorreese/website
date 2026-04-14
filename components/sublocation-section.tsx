@@ -10,18 +10,15 @@ interface SublocationSectionProps {
 export function SublocationSection({ sublocation, delay = 0 }: SublocationSectionProps) {
   return (
     <section className="mb-24">
-      {/* Text-reveal heading */}
+      {/* Divider — matches the photography index camera-group style */}
       <div className="px-6 max-w-7xl mx-auto mb-8">
-        <TextReveal delay={delay} wrapperClassName="mb-1">
-          <p className="text-xs tracking-[0.4em] uppercase text-muted">Series</p>
-        </TextReveal>
-        <TextReveal delay={delay + 0.1}>
-          <h2
-            className="text-2xl sm:text-3xl font-light"
-            style={{ fontFamily: "var(--font-playfair)" }}
-          >
-            {sublocation.name}
-          </h2>
+        <TextReveal delay={delay}>
+          <div className="flex items-center gap-6">
+            <p className="text-xs tracking-[0.35em] uppercase text-muted whitespace-nowrap">
+              {sublocation.name}
+            </p>
+            <div className="h-px flex-1 bg-border" />
+          </div>
         </TextReveal>
       </div>
 
