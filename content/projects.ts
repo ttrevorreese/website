@@ -20,6 +20,7 @@ export const projects: Project[] = [
     tech: ["TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "Cloudinary"],
     github: "https://github.com/ttrevorreese/website",
     live: "https://ttrevorreese.com",
+    image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/Screenshot_2026-04-14_140940_ayby6i.png",
     featured: true,
   },
   {
@@ -28,6 +29,7 @@ export const projects: Project[] = [
       "Collaborative CRUD web app for tracking and reporting population data. Built with a team using an Express/PUG stack containerized in Docker, with a REST API for data management.",
     tech: ["Python", "Node.js", "Express", "PUG", "Docker"],
     github: "https://github.com/ttrevorreese/Metronome",
+    image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/infowink_o2kphc.jpg",
     featured: true,
   },
   {
