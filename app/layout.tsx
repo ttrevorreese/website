@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   description: "Portfolio of Trevor Reese — software engineer and travel photographer.",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon.png", type: "image/png", sizes: "500x500" },
+      { url: "/favicon.ico?v=2", sizes: "any" },
+      { url: "/favicon.png?v=2", type: "image/png", sizes: "500x500" },
     ],
-    shortcut: "/favicon.ico",
-    apple: "/favicon.png",
+    shortcut: "/favicon.ico?v=2",
+    apple: "/favicon.png?v=2",
   },
 }
 
