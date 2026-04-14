@@ -64,7 +64,16 @@ const LOCATIONS = [
   { slug: "york",                 name: "York",                    country: "England",      year: 2023, featured: false, galleryStyle: "editorial", camera: null, folder: "2023 york",                      coverKey: "2023_york_hero_rvdtrl",                          heroKey: "2023_york_cover_wfqnjh" },
   { slug: "lake-vyrnwy",          name: "Lake Vyrnwy",             country: "Wales",        year: 2024, featured: false, galleryStyle: "editorial", camera: null, folder: "2024 lake vyrnwy",               coverKey: "2024_lake_vyrnwy_hero_hhtwpq",                   heroKey: "2024_lake_vyrnwy_cover_qkjuqi" },
   { slug: "much-wenlock",         name: "Much Wenlock",            country: "England",      year: 2024, featured: false, galleryStyle: "editorial", camera: null, folder: "2024 much wenlock",              coverKey: "2024_much_wenlock_hero_uqa3na",                  heroKey: "2024_much_wenlock_cover_bmk9ha" },
-  { slug: "richmond-park",        name: "Richmond Park",           country: "England",      year: 2024, featured: false, galleryStyle: "masonry",   camera: null, folder: "2024 richmond park",             coverKey: "2024_richmond_park_hero_rydxad",                 heroKey: "2024_richmond_park_cover_ni4k9w" },
+  {
+    slug: "richmond-park", name: "Richmond Park", country: "England", year: 2024, featured: false, galleryStyle: "masonry", camera: null,
+    folder: "2024 richmond park", coverKey: "2024_richmond_park_hero_rydxad", heroKey: "2024_richmond_park_cover_ni4k9w",
+    // Sublocations split photos by filename prefix — add more entries here for new cameras/shoots.
+    // match(publicId) returns true if the photo belongs to this sublocation.
+    sublocations: [
+      { name: "Canon EOS R",            match: id => id.startsWith("IMG_") },
+      { name: "Samsung Galaxy S22 Ultra", match: id => id.startsWith("20240527_") },
+    ],
+  },
 ]
 
 // ─── Cloudinary helpers ───────────────────────────────────────────────────────
@@ -122,26 +131,47 @@ function photoEntry(r, locationName, i) {
 }
 
 function locationBlock(loc, photos) {
-  const heroPhoto = { src: heroUrl(loc.heroKey), alt: loc.name, width: 1600, height: 900 }
-  const allPhotos = [heroPhoto, ...photos]
-
-  const photoLines = allPhotos
-    .map((p, i) => {
-      if (i === 0) return `      { src: "${p.src}", alt: "${p.alt}", width: ${p.width}, height: ${p.height} },`
-      return photoEntry(p, loc.name, i - 1)
-    })
-    .join("\n")
-
+  const heroLine = `      { src: "${heroUrl(loc.heroKey)}", alt: "${loc.name}", width: 1600, height: 900 },`
   const cameraLine = loc.camera ? `\n    camera: "${loc.camera}",` : ""
-
-  return `  {
+  const header = `  {
     slug: "${loc.slug}",
     name: "${loc.name}",
     country: "${loc.country}",
     year: ${loc.year},
     featured: ${loc.featured},
     galleryStyle: "${loc.galleryStyle}",${cameraLine}
-    coverImage: "${coverUrl(loc.coverKey)}",
+    coverImage: "${coverUrl(loc.coverKey)}",`
+
+  if (loc.sublocations && loc.sublocations.length > 0) {
+    // Photos go into sublocation groups; only the hero stays in photos[]
+    const sublocationBlocks = loc.sublocations.map(sub => {
+      const subPhotos = photos.filter(r => sub.match(r.public_id))
+      const lines = subPhotos.map((r, i) => photoEntry(r, loc.name, i)).join("\n")
+      return `      {
+        name: "${sub.name}",
+        photos: [
+${lines}
+        ],
+      },`
+    }).join("\n")
+
+    return `${header}
+    photos: [
+${heroLine}
+    ],
+    sublocations: [
+${sublocationBlocks}
+    ],
+  },`
+  }
+
+  // Default: flat photos array
+  const photoLines = [
+    heroLine,
+    ...photos.map((r, i) => photoEntry(r, loc.name, i)),
+  ].join("\n")
+
+  return `${header}
     photos: [
 ${photoLines}
     ],
