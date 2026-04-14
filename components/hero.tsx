@@ -6,15 +6,7 @@ import { HeroPhotoStrip, type HeroPhoto } from "./hero-photo-strip"
 import { TextReveal } from "./animations/text-reveal"
 import { ChevronDown } from "lucide-react"
 import { profile } from "@/content/profile"
-
-// Replace these with your real hero photos — portrait AND landscape both work.
-// Each entry needs: src (Cloudinary URL), width, height (original pixel dimensions).
-// Use f_auto,q_auto on the URL; width/height control the strip aspect ratio, not download size.
-const heroPhotos: HeroPhoto[] = Array(10).fill({
-  src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/IMG_1564-566_gldg6s.jpg",
-  width: 3024,
-  height: 4032,
-})
+import { heroPhotos } from "@/content/hero-photos"
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null)
