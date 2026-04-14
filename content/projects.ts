@@ -5,7 +5,7 @@ import type { Project } from "./types"
 
 export const projects: Project[] = [
   {
-    title: "Murrieta Bus System",
+    title: "Murrieta: Connected",
     description:
       "Designed an optimized bus route network for Murrieta, CA using Dijkstra's algorithm. Pulls real street data via Geoapify, models routes as a weighted graph, and renders interactive maps with Folium.",
     tech: ["Python", "Jupyter", "Pandas", "Geoapify", "Folium"],
