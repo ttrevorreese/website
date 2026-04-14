@@ -1,34 +1,51 @@
 import type { Project } from "./types"
 
+// Images: upload to Cloudinary "code projects" folder, then replace the image field.
+// Cloudinary URL format: https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/{public_id}.jpg
+
 export const projects: Project[] = [
   {
-    // [REPLACE] Replace with your real projects
-    title: "Project Alpha",
+    title: "Murrieta Bus System",
     description:
-      "A description of what this project does, the problem it solves, and what makes it interesting to build or use.",
-    tech: ["TypeScript", "Next.js", "PostgreSQL"],
-    github: "https://github.com/trevorreese/project-alpha", // [REPLACE]
-    live: "https://project-alpha.vercel.app", // [REPLACE]
-    image:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop",
+      "Designed an optimized bus route network for Murrieta, CA using Dijkstra's algorithm. Pulls real street data via Geoapify, models routes as a weighted graph, and renders interactive maps with Folium.",
+    tech: ["Python", "Jupyter", "Pandas", "Geoapify", "Folium"],
+    github: "https://github.com/ttrevorreese/finalyearproject",
+    image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/finalyearproject_zjjrl9.jpg",
     featured: true,
   },
   {
-    title: "Project Beta",
+    title: "Personal Portfolio",
     description:
-      "Another project description. What technology choices did you make and why? What did you learn?",
-    tech: ["Python", "FastAPI", "React"],
-    github: "https://github.com/trevorreese/project-beta", // [REPLACE]
-    image:
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=500&fit=crop",
+      "This site — a full-stack portfolio built with Next.js and Framer Motion. Features a parallax hero strip, location-based photography galleries, and server-side image optimization via Cloudinary.",
+    tech: ["TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "Cloudinary"],
+    github: "https://github.com/ttrevorreese/website",
+    live: "https://ttrevorreese.com",
     featured: true,
   },
   {
-    title: "Project Gamma",
+    title: "Metronome",
     description:
-      "A third project. Keep descriptions to 1-2 sentences — let the link and tech stack do the rest.",
-    tech: ["Go", "Docker", "Kubernetes"],
-    github: "https://github.com/trevorreese/project-gamma", // [REPLACE]
-    featured: false,
+      "Collaborative CRUD web app for tracking and reporting population data. Built with a team using an Express/PUG stack containerized in Docker, with a REST API for data management.",
+    tech: ["Python", "Node.js", "Express", "PUG", "Docker"],
+    github: "https://github.com/ttrevorreese/Metronome",
+    featured: true,
+  },
+  {
+    title: "Ambient Reverie",
+    description:
+      "Fully automated pipeline that generates 3-hour dark ambient YouTube videos using local AI. MusicGen composes the score, FLUX renders the visuals, Ollama writes the descriptions, and FFmpeg assembles the final video — zero human input after launch.",
+    tech: ["Python", "MusicGen", "FLUX", "Ollama", "FFmpeg"],
+    live: "https://www.youtube.com/@ambient-reverie",
+    image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/ambients_wmvwij.jpg",
+    featured: true,
+  },
+  {
+    title: "The Affirmation Garden",
+    description:
+      "AI-generated ambient video series for a positive affirmations channel. FLUX produces the imagery and MusicGen scores the audio, then the pipeline renders and uploads completed videos automatically.",
+    tech: ["Python", "FLUX", "MusicGen", "FFmpeg"],
+    live: "https://www.youtube.com/@The1AffirmationGarden",
+    image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/affirmations_heb8jg.png",
+    featured: true,
   },
 ]
