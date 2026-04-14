@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     title: "Cherished Memories Photography",
     description:
-      "Professional photography portfolio site built for a client. Features a gallery, booking flow, and contact management backed by Supabase, deployed on Vercel.",
+      "All-inclusive client site for Cherished Memories Photography — visitors can browse galleries, place photo orders, and book appointments directly through the site.",
     tech: ["TypeScript", "JavaScript", "CSS", "Supabase", "Vercel"],
     live: "https://cherishedmemoriesphotography.com",
     image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/cherished_memories_xewqta.png",
