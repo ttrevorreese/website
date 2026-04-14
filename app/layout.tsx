@@ -16,7 +16,11 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Trevor Reese",
   description: "Portfolio of Trevor Reese — software engineer and travel photographer.",
-  icons: { icon: "/icon.png" },
+  icons: {
+    icon: { url: "/favicon.png", type: "image/png" },
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 }
 
 export default function RootLayout({

@@ -22,8 +22,9 @@ export function HeroPhotoStrip({ photos, duration = 35 }: HeroPhotoStripProps) {
     <div className="absolute inset-0 overflow-hidden">
       <motion.div
         className="flex h-full gap-1"
-        initial={{ x: "-50%" }}
-        animate={{ x: "0%" }}
+        style={{ width: "max-content" }}
+        initial={{ x: "0%" }}
+        animate={{ x: "-50%" }}
         transition={{
           duration,
           ease: "linear",
