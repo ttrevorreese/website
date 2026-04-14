@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram, FaEtsy } from "react-icons/fa"
+import { SiKofi } from "react-icons/si"
 import { TextReveal } from "./animations/text-reveal"
 import { FadeUp } from "./animations/fade-up"
 import { ContactForm } from "./contact-form"
@@ -11,6 +12,7 @@ const socials = [
   { label: "LinkedIn", href: profile.social.linkedin, icon: FaLinkedin },
   { label: "Instagram", href: profile.social.instagram, icon: FaInstagram },
   { label: "Etsy Shop", href: profile.social.etsy, icon: FaEtsy },
+  { label: "Ko-fi", href: profile.social.kofi, icon: SiKofi },
 ]
 
 export function Contact() {

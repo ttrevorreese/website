@@ -16,5 +16,6 @@ export const profile: Profile = {
     linkedin: "https://linkedin.com/in/ttrevorreese",
     instagram: "https://instagram.com/ttrevorreese",
     etsy: "https://www.etsy.com/shop/PhotographyByTHR",
+    kofi: "https://ko-fi.com/ttrevorreese",
   },
 }

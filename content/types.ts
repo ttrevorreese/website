@@ -52,5 +52,6 @@ export type Profile = {
     linkedin: string
     instagram: string
     etsy: string
+    kofi: string
   }
 }

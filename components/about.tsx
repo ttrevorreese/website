@@ -45,7 +45,7 @@ export function About() {
             ))}
           </div>
 
-          <FadeUp delay={0.4}>
+          <FadeUp delay={0.4} className="flex flex-wrap gap-3">
             <Link
               href={profile.social.etsy}
               target="_blank"
@@ -53,6 +53,14 @@ export function About() {
               className="inline-flex items-center gap-3 border border-border px-6 py-3 text-xs tracking-[0.2em] uppercase hover:bg-card transition-colors"
             >
               Shop prints on Etsy
+            </Link>
+            <Link
+              href={profile.social.kofi}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 border border-border px-6 py-3 text-xs tracking-[0.2em] uppercase hover:bg-card transition-colors"
+            >
+              Support on Ko-fi
             </Link>
           </FadeUp>
         </div>
