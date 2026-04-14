@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function LocationPage({ params }: Props) {
   const { slug } = await params
   const location = locations.find((l) => l.slug === slug)
-  if (!location || !location.photos.length) notFound()
+  if (!location || !location.photos.length || location.published === false) notFound()
 
   return (
     <main>

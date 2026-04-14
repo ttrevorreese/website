@@ -12,6 +12,7 @@ const hero = (id: string) =>
 export const locations: Location[] = [
   {
     slug: "chicago",
+    camera: "Canon EOS 5D Mark II",
     name: "Chicago",
     country: "USA",
     year: 2019,
@@ -61,6 +62,7 @@ export const locations: Location[] = [
 
   {
     slug: "edinburgh",
+    camera: "Canon EOS 5D Mark II",
     name: "Edinburgh",
     country: "Scotland",
     year: 2021,
@@ -528,6 +530,7 @@ export const locations: Location[] = [
 
   {
     slug: "lake-tahoe",
+    camera: "Canon EOS 5D Mark II",
     name: "Lake Tahoe",
     country: "USA",
     year: 2021,
@@ -1001,6 +1004,7 @@ export const locations: Location[] = [
 
   {
     slug: "shrewsbury-ironbridge",
+    camera: "Canon EOS 5D Mark II",
     name: "Shrewsbury & Ironbridge",
     country: "England",
     year: 2021,
@@ -1242,6 +1246,7 @@ export const locations: Location[] = [
 
   {
     slug: "berlin",
+    camera: "Canon EOS 5D Mark II",
     name: "Berlin",
     country: "Germany",
     year: 2022,
@@ -1477,6 +1482,7 @@ export const locations: Location[] = [
 
   {
     slug: "copenhagen",
+    camera: "Canon EOS 5D Mark II",
     name: "Copenhagen",
     country: "Denmark",
     year: 2022,
@@ -1721,6 +1727,7 @@ export const locations: Location[] = [
 
   {
     slug: "hamburg",
+    camera: "Canon EOS 5D Mark II",
     name: "Hamburg",
     country: "Germany",
     year: 2022,
@@ -1945,6 +1952,7 @@ export const locations: Location[] = [
 
   {
     slug: "murrieta-car-show-2022",
+    camera: "Canon EOS 5D Mark II",
     name: "Murrieta Car Show",
     country: "USA",
     year: 2022,
@@ -2056,6 +2064,7 @@ export const locations: Location[] = [
 
   {
     slug: "prague",
+    camera: "Canon EOS 5D Mark II",
     name: "Prague",
     country: "Czech Republic",
     year: 2022,
@@ -2439,6 +2448,7 @@ export const locations: Location[] = [
 
   {
     slug: "roehampton-snow",
+    camera: "Canon EOS 5D Mark II",
     name: "Snow in Roehampton",
     country: "England",
     year: 2022,
@@ -2619,6 +2629,7 @@ export const locations: Location[] = [
 
   {
     slug: "shropshire-hills",
+    camera: "Canon EOS 5D Mark II",
     name: "Shropshire Hills",
     country: "England",
     year: 2022,
@@ -2748,6 +2759,7 @@ export const locations: Location[] = [
 
   {
     slug: "boise",
+    camera: "Canon EOS R",
     name: "Boise",
     country: "USA",
     year: 2023,
@@ -2948,6 +2960,7 @@ export const locations: Location[] = [
 
   {
     slug: "bratislava",
+    camera: "Canon EOS R",
     name: "Bratislava",
     country: "Slovakia",
     year: 2023,
@@ -3420,6 +3433,7 @@ export const locations: Location[] = [
 
   {
     slug: "budapest",
+    camera: "Canon EOS R",
     name: "Budapest",
     country: "Hungary",
     year: 2023,
@@ -4375,6 +4389,7 @@ export const locations: Location[] = [
 
   {
     slug: "murrieta-car-show-2023",
+    camera: "Canon EOS R",
     name: "Murrieta Car Show",
     country: "USA",
     year: 2023,
@@ -4570,6 +4585,7 @@ export const locations: Location[] = [
 
   {
     slug: "vienna",
+    camera: "Canon EOS R",
     name: "Vienna",
     country: "Austria",
     year: 2023,
@@ -5497,6 +5513,7 @@ export const locations: Location[] = [
 
   {
     slug: "york",
+    camera: "Canon EOS R",
     name: "York",
     country: "England",
     year: 2023,
@@ -6180,6 +6197,7 @@ export const locations: Location[] = [
 
   {
     slug: "lake-vyrnwy",
+    camera: "Samsung Galaxy S22 Ultra",
     name: "Lake Vyrnwy",
     country: "Wales",
     year: 2024,
@@ -6567,6 +6585,7 @@ export const locations: Location[] = [
 
   {
     slug: "much-wenlock",
+    camera: "Samsung Galaxy S22 Ultra",
     name: "Much Wenlock",
     country: "England",
     year: 2024,
@@ -6723,6 +6742,7 @@ export const locations: Location[] = [
 
   {
     slug: "richmond-park",
+    camera: "Canon EOS R & Samsung Galaxy S22 Ultra",
     name: "Richmond Park",
     country: "England",
     year: 2024,

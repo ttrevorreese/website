@@ -20,6 +20,7 @@ export type Location = {
   year?: number
   featured?: boolean
   camera?: string
+  published?: boolean
   photos: Photo[]
   sublocations?: Sublocation[]
 }
