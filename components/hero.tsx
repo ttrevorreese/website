@@ -30,7 +30,7 @@ export function Hero() {
       className="relative h-screen w-full flex items-center justify-center overflow-hidden"
     >
       {/* Scrolling photo strip */}
-      <HeroPhotoStrip photos={heroPhotos} duration={22} />
+      <HeroPhotoStrip photos={heroPhotos} duration={28} />
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/55" />
