@@ -3,14 +3,19 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 
+export interface HeroPhoto {
+  src: string
+  width: number
+  height: number
+}
+
 interface HeroPhotoStripProps {
-  photos: string[]
+  photos: HeroPhoto[]
   /** Seconds to complete one full loop. Default 35 */
   duration?: number
 }
 
 export function HeroPhotoStrip({ photos, duration = 35 }: HeroPhotoStripProps) {
-  // Duplicate the set so the loop resets invisibly
   const doubled = [...photos, ...photos]
 
   return (
@@ -26,13 +31,19 @@ export function HeroPhotoStrip({ photos, duration = 35 }: HeroPhotoStripProps) {
           repeatType: "loop",
         }}
       >
-        {doubled.map((src, i) => (
+        {doubled.map((photo, i) => (
           <div
             key={i}
             className="relative h-full flex-shrink-0"
-            style={{ aspectRatio: "2/3" }}
+            style={{ aspectRatio: `${photo.width} / ${photo.height}` }}
           >
-            <Image src={src} alt="" fill className="object-cover" sizes="40vw" />
+            <Image
+              src={photo.src}
+              alt=""
+              fill
+              className="object-cover"
+              sizes="40vw"
+            />
           </div>
         ))}
       </motion.div>

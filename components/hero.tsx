@@ -2,14 +2,19 @@
 
 import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { HeroPhotoStrip } from "./hero-photo-strip"
+import { HeroPhotoStrip, type HeroPhoto } from "./hero-photo-strip"
 import { TextReveal } from "./animations/text-reveal"
 import { ChevronDown } from "lucide-react"
 import { profile } from "@/content/profile"
 
-// TEST: single photo duplicated 10× — replace with real photo array later
-const HERO_PHOTO = "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/IMG_1564-566_gldg6s.jpg"
-const heroPhotos = Array(10).fill(HERO_PHOTO)
+// Replace these with your real hero photos — portrait AND landscape both work.
+// Each entry needs: src (Cloudinary URL), width, height (original pixel dimensions).
+// Use f_auto,q_auto on the URL; width/height control the strip aspect ratio, not download size.
+const heroPhotos: HeroPhoto[] = Array(10).fill({
+  src: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/IMG_1564-566_gldg6s.jpg",
+  width: 3024,
+  height: 4032,
+})
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null)
