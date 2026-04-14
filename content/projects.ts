@@ -17,6 +17,7 @@ export const projects: Project[] = [
     tech: ["TypeScript", "JavaScript", "CSS", "Supabase", "Vercel"],
     live: "https://cherishedmemoriesphotography.com",
     image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/cherished_memories_xewqta.png",
+    imageContain: true,
     featured: true,
   },
   {
