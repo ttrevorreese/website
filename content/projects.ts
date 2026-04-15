@@ -2,15 +2,6 @@ import type { Project } from "./types"
 
 export const projects: Project[] = [
   {
-    title: "Murrieta: Connected",
-    description:
-      "Designed an optimized bus route network for Murrieta, CA using Dijkstra's algorithm. Pulls real street data via Geoapify, models routes as a weighted graph, and renders interactive maps with Folium.",
-    tech: ["Python", "Jupyter", "Pandas", "Geoapify", "Folium"],
-    github: "https://github.com/ttrevorreese/finalyearproject",
-    image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/finalyearproject_zjjrl9.jpg",
-    featured: true,
-  },
-  {
     title: "Cherished Memories Photography",
     description:
       "All-inclusive client site for Cherished Memories Photography — visitors can browse galleries, place photo orders, and book appointments directly through the site.",
@@ -18,6 +9,15 @@ export const projects: Project[] = [
     live: "https://cherishedmemoriesphotography.com",
     image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/cherished_memories_xewqta.png",
     imageContain: true,
+    featured: true,
+  },
+  {
+    title: "Murrieta: Connected",
+    description:
+      "Designed an optimized bus route network for Murrieta, CA using Dijkstra's algorithm. Pulls real street data via Geoapify, models routes as a weighted graph, and renders interactive maps with Folium.",
+    tech: ["Python", "Jupyter", "Pandas", "Geoapify", "Folium"],
+    github: "https://github.com/ttrevorreese/finalyearproject",
+    image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/finalyearproject_zjjrl9.jpg",
     featured: true,
   },
   {
