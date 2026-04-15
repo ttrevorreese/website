@@ -15,7 +15,7 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
     <FadeUp delay={delay}>
       <div className="bg-card border border-border overflow-hidden group">
         {project.image && (
-          <div className={`relative aspect-video overflow-hidden ${project.imageContain ? "bg-card" : ""}`}>
+          <div className={`relative aspect-video overflow-hidden ${project.imageWhiteBg ? "bg-white" : project.imageContain ? "bg-card" : ""}`}>
             <Image
               src={project.image}
               alt={project.title}

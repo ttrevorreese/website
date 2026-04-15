@@ -33,6 +33,7 @@ export type Project = {
   live?: string
   image?: string
   imageContain?: boolean
+  imageWhiteBg?: boolean
   featured: boolean
 }
 
