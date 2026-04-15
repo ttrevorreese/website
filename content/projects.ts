@@ -24,7 +24,7 @@ export const projects: Project[] = [
   {
     title: "Ambient Reverie",
     description:
-      "Fully automated pipeline that generates 3-hour dark ambient YouTube videos using local AI. MusicGen composes the score, FLUX renders the visuals, Ollama writes the descriptions, and FFmpeg assembles the final video — zero human input after launch.",
+      "Fully automated pipeline that generates 3-hour dark ambient YouTube videos using a local machine. MusicGen composes the score, FLUX renders the visuals, Ollama writes the descriptions, and FFmpeg assembles the final video — zero human input after launch.",
     tech: ["Python", "MusicGen", "FLUX", "Ollama", "FFmpeg"],
     live: "https://www.youtube.com/@ambient-reverie",
     image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/ambients_wmvwij.jpg",
@@ -33,7 +33,7 @@ export const projects: Project[] = [
   {
     title: "The Affirmation Garden",
     description:
-      "AI-generated ambient video series for a positive affirmations channel. FLUX produces the imagery and MusicGen scores the audio, then the pipeline renders and uploads completed videos automatically.",
+      "An ambient video series for a positive affirmations channel. FLUX produces the imagery and MusicGen scores the audio, then the pipeline renders and uploads completed videos automatically.",
     tech: ["Python", "FLUX", "MusicGen", "FFmpeg"],
     live: "https://www.youtube.com/@The1AffirmationGarden",
     image: "https://res.cloudinary.com/dyqdtpd3b/image/upload/f_auto,q_auto,w_800/affirmations_heb8jg.png",
