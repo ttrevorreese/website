@@ -92,17 +92,31 @@ async function main() {
   let content = readFileSync(projectsPath, "utf8")
 
   for (const [title, url] of Object.entries(urlMap)) {
-    // Find the project block by title and inject/replace the image field
-    const titleRegex = new RegExp(
-      `(title:\\s*"${title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}",[\\s\\S]*?)(featured:)`,
-      "g"
+    const escapedTitle = title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    // Match the full project block from title to its closing },
+    const blockRegex = new RegExp(
+      `(title:\\s*"${escapedTitle}"[\\s\\S]*?)(\\s*},)`,
     )
-    if (content.match(new RegExp(`image:.*${title.split(" ")[0]}`))) {
-      // Already has an image — skip (avoid double-patching)
-      console.log(`\n  ${title}: image already set, skipping`)
+    const blockMatch = content.match(blockRegex)
+    if (!blockMatch) {
+      console.log(`\n  ${title}: block not found in projects.ts, skipping`)
       continue
     }
-    content = content.replace(titleRegex, `$1image: "${url}",\n    $2`)
+    const block = blockMatch[1]
+    if (block.includes("image:")) {
+      // Already has an image — replace the existing URL instead of adding a duplicate
+      content = content.replace(blockRegex, (_, b, close) =>
+        b.replace(/image:\s*"[^"]*"/, `image: "${url}"`) + close
+      )
+      console.log(`  ${title}: image updated`)
+    } else {
+      // Inject image field before featured:
+      const titleRegex = new RegExp(
+        `(title:\\s*"${escapedTitle}"[\\s\\S]*?)(featured:)`
+      )
+      content = content.replace(titleRegex, `$1image: "${url}",\n    $2`)
+      console.log(`  ${title}: image added`)
+    }
   }
 
   writeFileSync(projectsPath, content, "utf8")
