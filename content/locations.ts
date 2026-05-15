@@ -6571,7 +6571,7 @@ export const locations: Location[] = [
     country: "England",
     year: 2024,
     featured: false,
-    published: false,
+    published: true,
     galleryStyle: "editorial",
     coverImage: "https://f004.backblazeb2.com/file/ttrevorreese-photos/2024_much_wenlock_hero_uqa3na.jpg",
     photos: [
@@ -6626,7 +6626,6 @@ export const locations: Location[] = [
       { src: "https://f004.backblazeb2.com/file/ttrevorreese-photos/20240525_123921_bewkyo.jpg", alt: "Much Wenlock 48", width: 4000, height: 1868 },
       { src: "https://f004.backblazeb2.com/file/ttrevorreese-photos/20240525_123932_u7coha.jpg", alt: "Much Wenlock 49", width: 4000, height: 1868 },
       { src: "https://f004.backblazeb2.com/file/ttrevorreese-photos/20240525_123934_lsatba.jpg", alt: "Much Wenlock 50", width: 1868, height: 4000 },
-      { src: "https://f004.backblazeb2.com/file/ttrevorreese-photos/20240525_124129_c3pqed.jpg", alt: "Much Wenlock 51", width: 4000, height: 1868 },
       { src: "https://f004.backblazeb2.com/file/ttrevorreese-photos/20240525_124140_twdgxu.jpg", alt: "Much Wenlock 52", width: 4000, height: 1868 },
       { src: "https://f004.backblazeb2.com/file/ttrevorreese-photos/20240525_124209_igrzmd.jpg", alt: "Much Wenlock 53", width: 4000, height: 1868 },
       { src: "https://f004.backblazeb2.com/file/ttrevorreese-photos/20240525_124216_iyx6ed.jpg", alt: "Much Wenlock 54", width: 4000, height: 1868 },
