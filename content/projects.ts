@@ -52,7 +52,7 @@ export const projects: Project[] = [
   {
     title: "Personal Portfolio",
     description:
-      "This site — a full-stack portfolio built with Next.js and Framer Motion. Features a parallax hero strip, location-based photography galleries, and server-side image optimization via Cloudinary.",
+      "This site — a full-stack portfolio built with Next.js and Framer Motion. Features a parallax hero strip, location-based photography galleries, and server-side image optimization via Backblaze.",
     tech: ["TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "Cloudinary"],
     github: "https://github.com/ttrevorreese/website",
     live: "https://ttrevorreese.com",
