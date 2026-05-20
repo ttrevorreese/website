@@ -34,7 +34,7 @@ export const projects: Project[] = [
     title: "The Affirmation Garden",
     description:
       "An ambient video series for a positive affirmations channel. FLUX produces the imagery and MusicGen scores the audio, then the pipeline renders and uploads completed videos automatically.",
-    tech: ["Python", "FLUX", "MusicGen", "FFmpeg"],
+    tech: ["Python", "MusicGen", "FLUX", "Ollama", "FFmpeg"],
     live: "https://www.youtube.com/@The1AffirmationGarden",
     image: "https://f004.backblazeb2.com/file/ttrevorreese-photos/affirmations_heb8jg.png",
     featured: true,
