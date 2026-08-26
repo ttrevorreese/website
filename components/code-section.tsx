@@ -28,7 +28,7 @@ export function CodeSection() {
       </div>
 
       {/* Featured projects */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
         {featured.map((project, i) => (
           <ProjectCard key={project.title} project={project} delay={i * 0.1} />
         ))}

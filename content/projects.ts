@@ -13,6 +13,41 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "SnapFlow",
+    description:
+      "Full operations platform for a school photography business, replacing Airtable, Zoho, and spreadsheets with one system spanning sales, scheduling, production, storefront sales, and invoicing. Serves five distinct user surfaces — admin dashboard, photographer PWA, school portal, public storefront, and studio kiosk — across three brands, backed by two-layer role and Postgres RLS permissions.",
+    tech: ["TypeScript", "Next.js", "Supabase", "PostgreSQL", "Stripe", "Tailwind CSS"],
+    featured: true,
+  },
+  {
+    title: "Constellation",
+    description:
+      "Mobile-first PWA giving photographers their schedule, job details, and mileage reimbursement, plus a gamified achievement layer and a companion sales CRM for account managers. Airtable stays the source of truth and syncs one-way into Supabase on a cron schedule, with automatic division switching built into the UI.",
+    tech: ["TypeScript", "Next.js", "Supabase", "Airtable API", "Tailwind CSS"],
+    featured: true,
+  },
+  {
+    title: "Pulsar",
+    description:
+      "Windows app that coordinates ID-card printing across a fleet of laptops on-site at photo shoots — every laptop runs the same binary and the fleet elects a print station among itself, with automatic failover and structural duplicate-print prevention. Talks to Zebra ZXP-7 printers through a COM wrapper around the native ZMotif SDK, backed by a Kestrel broker and a filesystem-based job queue.",
+    tech: ["C#", ".NET 8", "WPF", "ASP.NET Core", "Zebra SDK"],
+    featured: true,
+  },
+  {
+    title: "PrintGate",
+    description:
+      "Windows app that connects a single laptop to every Zebra printer available on the network — the same problem Pulsar solves, but without a dedicated print broker. PrintGate talks directly to printers over the router to check availability and print.",
+    tech: ["C#", ".NET 8", "WPF", "Zebra SDK"],
+    featured: true,
+  },
+  {
+    title: "Payload",
+    description:
+      "Auto-backup application that watches a workflow's Dropbox sync and automatically uploads and groups incoming photos as they land, replacing manual folder babysitting during picture-day imports.",
+    tech: ["C#", ".NET 8", "WPF", "Dropbox API"],
+    featured: true,
+  },
+  {
     title: "Murrieta: Connected",
     description:
       "Designed an optimized bus route network for Murrieta, CA using Dijkstra's algorithm. Pulls real street data via Geoapify, models routes as a weighted graph, and renders interactive maps with Folium.",

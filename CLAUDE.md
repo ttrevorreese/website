@@ -155,13 +155,20 @@ Bio, tagline, profile photo URL, and social links:
 - Email: trevor.reese2002@gmail.com
 
 ### Projects (`content/projects.ts`)
-6 featured projects (all `featured: true`, shown in the grid):
-1. Murrieta: Connected — Python/Jupyter bus routing (GitHub)
-2. Cherished Memories Photography — TypeScript/Supabase client site (live)
-3. Ambient Reverie — Python/AI ambient YouTube pipeline (YouTube)
-4. The Affirmation Garden — Python/AI affirmation YouTube channel (YouTube)
-5. Metronome — Node.js/Docker CRUD app (GitHub) — `imageContain: true`
-6. Personal Portfolio — Next.js portfolio (GitHub + live)
+11 featured projects (all `featured: true`, shown in a 3-wide grid at `lg` breakpoint):
+1. Cherished Memories Photography — TypeScript/Supabase client site (live)
+2. SnapFlow — internal ops platform (ERP) for a school photography business, Next.js/Supabase — no public link (private client system)
+3. Constellation — photographer PWA + sales CRM, Next.js/Supabase syncing from Airtable — no public link (private client system)
+4. Pulsar — Windows app coordinating Zebra ID-card printing across a laptop fleet, C#/.NET/WPF — no public link (source private; public repo is a signed-build auto-update channel only)
+5. PrintGate — Windows app routing print jobs to networked Zebra printers, C#/.NET/WPF — no public link (same reasoning as Pulsar)
+6. Payload — Windows auto-backup app that uploads/groups photos on Dropbox sync, C#/.NET/WPF — no public link (same reasoning as Pulsar)
+7. Murrieta: Connected — Python/Jupyter bus routing (GitHub)
+8. Ambient Reverie — Python/AI ambient YouTube pipeline (YouTube)
+9. The Affirmation Garden — Python/AI affirmation YouTube channel (YouTube)
+10. Metronome — Node.js/Docker CRUD app (GitHub) — `imageContain: true`
+11. Personal Portfolio — Next.js portfolio (GitHub + live)
+
+SnapFlow and Constellation are working titles — final names still TBD. Pulsar, PrintGate, and Payload are all part of the same in-house Windows-app family (same C#/.NET/WPF stack); their real source repos are private and the public `*-dist` repos (e.g. `pulsar-dist`) contain only signed installers + an update manifest, no source or docs.
 
 Project images are stored in Cloudinary folder `code projects`. Run `sync-project-images.mjs` to update URLs. `imageContain: true` on a project uses `object-contain` + padding instead of `object-cover` (used for logos).
 
